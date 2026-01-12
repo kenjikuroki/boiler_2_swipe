@@ -5,13 +5,17 @@ import 'package:shimmer/shimmer.dart';
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:google_fonts/google_fonts.dart'; // フォント追加
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'dart:convert';
 import 'widgets/ad_banner.dart';
 import 'utils/ad_manager.dart';
+import 'package:in_app_review/in_app_review.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  MobileAds.instance.initialize();
+  
+
+
   
 
   
@@ -56,6 +60,8 @@ class Quiz {
 class PrefsHelper {
   static const String _keyWeakQuestions = 'weak_questions';
   static const String _keyAdCounter = 'ad_counter';
+  static const String _keyQuizCompletionCount = 'quiz_completion_count';
+  static const String _keyHasRequestedReview = 'has_requested_review';
 
   // インタースティシャル広告の表示判定 (3回に1回表示)
   static Future<bool> shouldShowInterstitial() async {
@@ -120,9 +126,31 @@ class PrefsHelper {
   }
 
   // 苦手リスト取得
+  // 苦手リスト取得
   static Future<List<String>> getWeakQuestions() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getStringList(_keyWeakQuestions) ?? [];
+  }
+
+  // クイズ完了数をインクリメントし、レビューリクエストすべきか判定
+  // 初回のみ、3回完了時に true を返す
+  static Future<bool> incrementCompletionCountAndCheckReview() async {
+    final prefs = await SharedPreferences.getInstance();
+    
+    // 既にレビュー依頼済みなら false
+    if (prefs.getBool(_keyHasRequestedReview) ?? false) {
+      return false;
+    }
+
+    int count = (prefs.getInt(_keyQuizCompletionCount) ?? 0) + 1;
+    await prefs.setInt(_keyQuizCompletionCount, count);
+
+    if (count == 3) {
+      await prefs.setBool(_keyHasRequestedReview, true);
+      return true;
+    }
+    
+    return false;
   }
 }
 
@@ -171,7 +199,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '2級ボイラー技士',
+      title: '2級ボイラー',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
@@ -217,6 +245,14 @@ class _HomePageState extends State<HomePage> {
   }
   
   Future<void> _initializeApp() async {
+    // 1. UI描画完了後、少し待ってからダイアログを表示する (ATT対策)
+    await Future.delayed(const Duration(milliseconds: 1000));
+    // 2. 同意フローの初期化 (完了を待つ)
+    await AdManager.instance.initializeConsent();
+    // 3. Mobile Ads SDKの初期化 & 広告ロード
+    await MobileAds.instance.initialize();
+    AdManager.instance.preloadAd('home');
+
     // データ初期ロード
     await QuizData.load();
     await _loadUserData();
@@ -611,6 +647,16 @@ class _QuizPageState extends State<QuizPage> {
     // 画面遷移
     // 画面遷移（3回に1回インタースティシャル広告を表示してから）
     if (mounted) {
+      // 3回完了時のレビューリクエスト (ポップアップ)
+      // インタースティシャル広告の前に表示する
+      final bool shouldRequestReview = await PrefsHelper.incrementCompletionCountAndCheckReview();
+      if (shouldRequestReview) {
+        final InAppReview inAppReview = InAppReview.instance;
+        if (await inAppReview.isAvailable()) {
+          await inAppReview.requestReview();
+        }
+      }
+
       final shouldShow = await PrefsHelper.shouldShowInterstitial();
       
       if (shouldShow) {

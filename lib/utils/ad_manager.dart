@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 
 class PreloadedAd {
   final BannerAd ad;
@@ -23,6 +24,10 @@ class AdManager {
   
   // Test ID for debug (optional use)
   // final String _testAdUnitId = 'ca-app-pub-3940256099942544/6300978111';
+
+  Future<void> initializeConsent() async {
+    await AppTrackingTransparency.requestTrackingAuthorization();
+  }
 
   void preloadAd(String key) {
     if (_ads.containsKey(key)) {

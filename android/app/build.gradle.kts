@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.otsu4_swipe"
+    namespace = "com.yourname.boilerswipe"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -20,7 +20,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.boiler2"
+        applicationId = "com.yourname.boilerswipe"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

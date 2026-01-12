@@ -1,5 +1,5 @@
 name: boiler2_quiz
-description: "2級ボイラー技士 対策アプリ"
+description: "2級ボイラー技士 対策アプリ - スキマ時間でサクサク合格！"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 1.0.4+4
 
 environment:
   sdk: ^3.9.0
@@ -35,6 +35,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   appinio_swiper: ^2.1.1
+  app_tracking_transparency: ^2.0.4
+  in_app_review: ^2.0.9
   shared_preferences: ^2.5.4
   shimmer: ^3.0.0
   google_mobile_ads: ^5.2.0

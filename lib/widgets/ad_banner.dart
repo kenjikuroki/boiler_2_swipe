@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../utils/ad_manager.dart';
+import '../utils/purchase_manager.dart';
 import 'banner_ad_placeholder.dart';
 
 class AdBanner extends StatefulWidget {
@@ -29,7 +30,9 @@ class _AdBannerState extends State<AdBanner> {
   @override
   void initState() {
     super.initState();
-    _initAd();
+    if (!PurchaseManager.instance.isPremium.value) {
+      _initAd();
+    }
   }
 
   void _initAd() {
@@ -92,13 +95,22 @@ class _AdBannerState extends State<AdBanner> {
 
   @override
   Widget build(BuildContext context) {
-    if (_isLoaded && _bannerAd != null) {
-      return SizedBox(
-        width: _bannerAd!.size.width.toDouble(),
-        height: _bannerAd!.size.height.toDouble(),
-        child: AdWidget(ad: _bannerAd!),
-      );
-    }
-    return const BannerAdPlaceholder();
+    return ValueListenableBuilder<bool>(
+      valueListenable: PurchaseManager.instance.isPremium,
+      builder: (context, isPremium, child) {
+        if (isPremium) {
+          return const SizedBox.shrink();
+        }
+        
+        if (_isLoaded && _bannerAd != null) {
+          return SizedBox(
+            width: _bannerAd!.size.width.toDouble(),
+            height: _bannerAd!.size.height.toDouble(),
+            child: AdWidget(ad: _bannerAd!),
+          );
+        }
+        return const BannerAdPlaceholder();
+      },
+    );
   }
 }

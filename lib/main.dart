@@ -3,13 +3,19 @@ import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:appinio_swiper/appinio_swiper.dart';
-import 'package:google_fonts/google_fonts.dart'; // フォント追加
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'dart:convert';
 import 'widgets/ad_banner.dart';
 import 'utils/ad_manager.dart';
 import 'package:in_app_review/in_app_review.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'utils/purchase_manager.dart';
+import 'widgets/premium_unlock_card.dart';
+import 'widgets/special_offer_dialog.dart';
+import 'widgets/banner_ad_placeholder.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,6 +29,8 @@ Future<void> main() async {
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
+  
+  await PurchaseManager.instance.initialize();
   
   runApp(const MyApp());
 }
@@ -208,11 +216,11 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.mPlusRounded1cTextTheme(
           Theme.of(context).textTheme,
         ),
-        scaffoldBackgroundColor: const Color(0xFFF9F9F9),
+        scaffoldBackgroundColor: const Color(0xFFF3F4F6), // シックな薄いグレー
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black87,
-          elevation: 1,
+          backgroundColor: Color(0xFF7F1D1D), // シックな深紅
+          foregroundColor: Colors.white,
+          elevation: 0,
         ),
       ),
       home: const HomePage(),
@@ -298,6 +306,7 @@ class _HomePageState extends State<HomePage> {
     
     // クイズ開始時に結果画面用の広告とインタースティシャル広告を先行読み込み
     AdManager.instance.preloadAd('result');
+    AdManager.instance.preloadAd('quiz'); // Quiz画面用
     AdManager.instance.preloadInterstitial();
     
     await Navigator.of(context).push(
@@ -330,6 +339,7 @@ class _HomePageState extends State<HomePage> {
     
     // 復習モード開始
     AdManager.instance.preloadAd('result');
+    AdManager.instance.preloadAd('quiz'); // Quiz画面用
     AdManager.instance.preloadInterstitial();
 
     await navigator.push(
@@ -356,93 +366,260 @@ class _HomePageState extends State<HomePage> {
     }
 
     // 画面の中身 (body:)
-    return Scaffold(
-      backgroundColor: Colors.orange.shade50, // 1. 全体の背景色を薄いオレンジに
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        toolbarHeight: 140, // 高さ調整
-        title: Column(
-          children: const [
-             SizedBox(height: 20), // 上部間隔
-             Text(
-              '爆速',
+    return ValueListenableBuilder<bool>(
+      valueListenable: PurchaseManager.instance.isPremium,
+      builder: (context, isPremium, child) {
+        return Scaffold(
+          backgroundColor: const Color(0xFFF3F4F6), // シックな背景色
+          appBar: AppBar(
+            systemOverlayStyle: SystemUiOverlayStyle.light,
+            backgroundColor: const Color(0xFF991B1B), // シックな深紅
+            elevation: 0,
+            title: const Text(
+              '２級ボイラー技士試験対策',
               style: TextStyle(
-                color: Colors.deepOrange, // ブランドカラーで強調
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 64, // さらに巨大化
-                height: 1.0,
-                letterSpacing: 4.0, // 文字間隔を広げて勢いを出す
-                shadows: [
-                  Shadow(
-                    offset: Offset(2, 2),
-                    blurRadius: 4.0,
-                    color: Colors.black12,
-                  ),
+              ),
+            ),
+            centerTitle: true,
+            iconTheme: const IconThemeData(color: Colors.white),
+          ),
+          body: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  const SizedBox(height: 32),
+                  
+                  // Part1: 構造
+                  _buildMenuButton(context, '1. ボイラーの構造', 'part1', Icons.settings),
+                  const SizedBox(height: 16),
+                  
+                  // Part2: 取扱い
+                  _buildMenuButton(context, '2. ボイラーの取扱い', 'part2', Icons.speed),
+                  const SizedBox(height: 16),
+                  
+                  // Part3: 燃料・燃焼
+                  _buildMenuButton(context, '3. 燃料および燃焼', 'part3', Icons.local_fire_department),
+                  const SizedBox(height: 16),
+                  
+                  // Part4: 関係法令
+                  _buildMenuButton(context, '4. 関係法令', 'part4', Icons.gavel),
+                  const SizedBox(height: 16),
+    
+                  // 苦手克服ボタン (常に表示)
+                  SizedBox(
+                      width: double.infinity,
+                      height: 70, 
+                      child: ElevatedButton.icon(
+                        onPressed: () => _startWeaknessReview(context),
+                        icon: const Icon(Icons.warning_amber_rounded, color: Colors.white),
+                        label: Text("苦手を復習する ($_weaknessCount問)"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF991B1B), // シックな赤
+                          foregroundColor: Colors.white,
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                          textStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  
+                  // プレミアムアップグレードカード
+                  const PremiumUnlockCard(),
+                  
+                  // 購入復元ボタン（カードの外側に配置）
+                  if (!isPremium)
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 16.0),
+                      child: TextButton(
+                        onPressed: () => PurchaseManager.instance.restorePurchases(),
+                        child: const Text(
+                          '購入を復元する',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      ),
+                    ),
+                  
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
-             SizedBox(height: 8),
-            Text(
-              '2級ボイラー技士',
-              style: TextStyle(
-                color: Colors.black87,
-                fontWeight: FontWeight.bold,
-                fontSize: 24, // サブタイトルも大きく
-              ),
-            ),
-          ],
-        ),
-        centerTitle: true,
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              const SizedBox(height: 40),
-              
-              // Part1: 構造
-              _buildMenuButton(context, '1. ボイラーの構造', 'part1', Icons.settings),
-              const SizedBox(height: 16),
-              
-              // Part2: 取扱い
-              _buildMenuButton(context, '2. ボイラーの取扱い', 'part2', Icons.speed),
-              const SizedBox(height: 16),
-              
-              // Part3: 燃料・燃焼
-              _buildMenuButton(context, '3. 燃料および燃焼', 'part3', Icons.local_fire_department),
-              const SizedBox(height: 16),
-              
-              // Part4: 関係法令
-              _buildMenuButton(context, '4. 関係法令', 'part4', Icons.gavel),
-              const SizedBox(height: 40),
+        );
+      }
+    );
+  }
 
-               // 苦手克服ボタン (常に表示)
-              SizedBox(
-                  width: double.infinity,
-                  height: 60, // 高さを揃えるか、目立たせるために少し大きくする
-                  child: ElevatedButton.icon(
-                    onPressed: () => _startWeaknessReview(context),
-                    icon: const Icon(Icons.warning_amber_rounded, color: Colors.white),
-                    label: Text("苦手を復習する ($_weaknessCount問)"),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
-                      foregroundColor: Colors.white,
-                      elevation: 4,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                      textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+  Widget _buildSisterAppPromo(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => _showSisterAppDialog(context),
+          borderRadius: BorderRadius.circular(16),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              children: [
+                // Icon
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    'assets/sister_app_icon.jpg',
+                    width: 60,
+                    height: 60,
+                    fit: BoxFit.cover,
+                    errorBuilder: (c, o, s) => Container(
+                      width: 60,
+                      height: 60,
+                      color: Colors.grey[200],
+                      child: const Icon(Icons.broken_image, color: Colors.grey),
                     ),
                   ),
                 ),
-
-              // バナー広告
-              const SizedBox(height: 20),
-              const AdBanner(adKey: 'home'),
-              const SizedBox(height: 20), // 下部パディング確保
-            ],
+                const SizedBox(width: 16),
+                // Text
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "選択問題アプリリリース！",
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 4),
+                      Text(
+                        "空き時間にサクサク解ける\n姉妹アプリはこちら",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          height: 1.4,
+                          color: Colors.black87,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 8),
+                const Icon(Icons.launch, color: Colors.grey),
+              ],
+            ),
           ),
         ),
+      ),
+    );
+  }
+
+  void _showSisterAppDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return Dialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          child: Container(
+            padding: const EdgeInsets.all(24),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(24),
+              boxShadow: const [
+                 BoxShadow(color: Colors.black26, blurRadius: 20, offset: Offset(0, 10)),
+              ],
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Colors.grey.shade200),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 10, offset: const Offset(0, 4)),
+                    ],
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.asset(
+                      'assets/sister_app_icon.jpg',
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  "姉妹アプリ\n「登販対策 選択問題」",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 12),
+                 const Text(
+                  "App Storeを開いて、\n姉妹アプリのページに移動します。",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 14, color: Colors.grey, height: 1.5),
+                ),
+                const SizedBox(height: 24),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        style: TextButton.styleFrom(foregroundColor: Colors.grey),
+                        child: const Text("キャンセル"),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                           Navigator.pop(context);
+                           launchUrl(
+                             Uri.parse("https://apps.apple.com/app/id6757967698"),
+                             mode: LaunchMode.externalApplication,
+                           );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.deepOrange,
+                          foregroundColor: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                        ),
+                        child: const Text("開く", style: TextStyle(fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 
@@ -496,7 +673,7 @@ class _HomePageState extends State<HomePage> {
         },
         child: Row(
           children: [
-            Icon(icon, color: Colors.deepOrange, size: 28), // アイコン
+            Icon(icon, color: const Color(0xFFD97706), size: 28), // シックなアンバー/ゴールド
             const SizedBox(width: 20),
             Expanded(
               child: Text(
@@ -663,12 +840,28 @@ class _QuizPageState extends State<QuizPage> {
         AdManager.instance.showInterstitial(
           onComplete: () {
             if (mounted) {
-              _navigateToResult();
+              _showSpecialOfferIfNeeded().then((_) {
+                if (mounted) _navigateToResult();
+              });
             }
           },
         );
       } else {
         _navigateToResult();
+      }
+    }
+  }
+
+  Future<void> _showSpecialOfferIfNeeded() async {
+    final prefs = await SharedPreferences.getInstance();
+    final bool isPremium = PurchaseManager.instance.isPremium.value;
+    final bool offerShown = prefs.getBool('special_offer_shown') ?? false;
+    final DateTime limitDate = DateTime(2026, 3, 1);
+    
+    if (!isPremium && !offerShown && DateTime.now().isBefore(limitDate)) {
+      await prefs.setBool('special_offer_shown', true);
+      if (mounted) {
+        await SpecialOfferDialog.show(context);
       }
     }
   }
@@ -802,6 +995,8 @@ class _QuizPageState extends State<QuizPage> {
                   ],
                 ),
               ),
+              // Quiz画面下部バナー
+              const AdBanner(adKey: 'quiz'),
             ],
           ),
         ),
@@ -828,6 +1023,7 @@ class _QuizPageState extends State<QuizPage> {
       ),
       alignment: Alignment.center,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start, // Top alignment
         children: [
           if (hasImage) 
             Expanded(
@@ -852,48 +1048,42 @@ class _QuizPageState extends State<QuizPage> {
               ),
             )
           else 
-            const Spacer(flex: 2),
+            const SizedBox(height: 32), // 少しスペース
 
           Expanded(
             flex: 5,
             child: Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  return FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: SizedBox(
-                      width: constraints.maxWidth,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                           if (!hasImage)
-                            const Text(
-                              "Q.",
-                              style: TextStyle(
-                                fontSize: 40,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blueGrey,
-                              ),
-                            ),
-                          if (!hasImage) const SizedBox(height: 20),
-
-                          Text(
-                            quiz.question,
-                            style: TextStyle(
-                              fontSize: hasImage ? 20 : 24,
-                              fontWeight: FontWeight.bold,
-                              height: 1.3,
-                              color: Colors.black87,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch, // Stretch to fill width
+                children: [
+                   if (!hasImage)
+                    const Text(
+                      "Q.",
+                      textAlign: TextAlign.center, // Center aligned
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueGrey,
                       ),
                     ),
-                  );
-                },
+                  if (!hasImage) const SizedBox(height: 20),
+
+                  Expanded(
+                    child: AutoSizeText(
+                      quiz.question,
+                      style: TextStyle(
+                        fontSize: hasImage ? 24 : 32, // 32 (text only), 24 (with image)
+                        fontWeight: FontWeight.bold,
+                        height: 1.3,
+                        color: Colors.black87,
+                      ),
+                      textAlign: TextAlign.left, // Left aligned
+                      minFontSize: 12,
+                      maxLines: 20,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -952,225 +1142,260 @@ class ResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isPerfect = (score == total);
+    // 8点以上（10問中）などを合格ラインとする
+    // ここでは単純に正解率80%以上を合格圏内とするロジック例
+    final double rate = total > 0 ? score / total : 0.0;
+    final bool isPassed = rate >= 0.8;
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("結果発表"),
-        centerTitle: true,
-        automaticallyImplyLeading: false, 
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-      ),
       backgroundColor: const Color(0xFFF9F9F9),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 24),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: const BorderRadius.vertical(bottom: Radius.circular(32)),
-              boxShadow: [
-                BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 5))
-              ],
-            ),
-            child: Column(
-              children: [
-                const Text(
-                  "正解数",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey),
-                ),
-                Text(
-                  "$score / $total",
-                  style: const TextStyle(
-                    fontSize: 48,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.orange,
-                  ),
-                ),
-                // 10問テストの判定コメント
-                if (!isWeaknessReview && total >= 10)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Text(
-                      score >= 8 ? "合格圏内！素晴らしい！" : "あと少し！復習しよう",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: score >= 8 ? Colors.green : Colors.red,
+      body: SafeArea(
+        child: Column(
+          children: [
+            // 1. 上部エリア
+            // 広告バナー
+            const AdBanner(adKey: 'result'),
+            
+            // スコアカード
+            Container(
+              width: double.infinity,
+              margin: const EdgeInsets.only(bottom: 16),
+              padding: const EdgeInsets.symmetric(vertical: 24),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(32)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.05),
+                    blurRadius: 10,
+                    offset: const Offset(0, 5),
+                  )
+                ],
+              ),
+              child: Column(
+                children: [
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                       const Text(
+                         "正解数",
+                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.grey),
+                       ),
+                       const SizedBox(width: 12),
+                       Text(
+                         "$score/$total",
+                         style: const TextStyle(
+                           fontSize: 48,
+                           fontWeight: FontWeight.w900,
+                           color: Colors.orange,
+                         ),
+                       ),
+                     ],
+                   ),
+                  
+                  const SizedBox(height: 8),
+
+                  // 評価メッセージ
+                  if (isPerfect)
+                    const Text(
+                      "PERFECT! 🎉",
+                      style: TextStyle(fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),
+                    )
+                  else if (isPassed)
+                    const Text(
+                      "合格圏内！素晴らしい！",
+                      style: TextStyle(fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),
+                    )
+                  else
+                    const Text(
+                      "あと少し！復習しよう",
+                      style: TextStyle(fontSize: 20, color: Colors.red, fontWeight: FontWeight.bold),
+                    ),
+                  
+                  if (isWeaknessReview && score > 0)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Text(
+                        "$score個の苦手を克服しました！",
+                        style: const TextStyle(fontSize: 14, color: Colors.blueAccent, fontWeight: FontWeight.bold),
                       ),
                     ),
-                  )
-                else if (score == total)
-                   const Text(
-                    "PERFECT! 🎉",
-                    style: TextStyle(fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),
-                  ),
-                
-                if (isWeaknessReview && score > 0)
-                   Padding(
-                     padding: const EdgeInsets.only(top: 8.0),
-                     child: Text(
-                      "$score個の苦手を克服しました！",
-                      style: const TextStyle(fontSize: 16, color: Colors.blueAccent, fontWeight: FontWeight.bold),
-                                       ),
-                   ),
-              ],
+                ],
+              ),
             ),
-          ),
-          
-          const SizedBox(height: 16),
-          
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              itemCount: history.length,
-              itemBuilder: (context, index) {
-                final item = history[index];
-                final Quiz quiz = item['quiz'];
-                final bool isCorrect = item['result'];
 
-                return Card(
-                  margin: const EdgeInsets.only(bottom: 12),
-                  elevation: 0,
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                    side: BorderSide(color: Colors.grey.withValues(alpha: 0.1)),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Icon(
-                              isCorrect ? Icons.check_circle : Icons.cancel,
-                              color: isCorrect ? Colors.green : Colors.red,
-                              size: 28,
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    quiz.question,
-                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                                  ),
-                                  if (quiz.imagePath != null)
-                                    Padding(
-                                      padding: const EdgeInsets.only(top: 4.0),
-                                      child: Row(
-                                        children: [
-                                          Icon(Icons.image, size: 16, color: Colors.grey[500]),
-                                          const SizedBox(width: 4),
-                                          Text("画像問題", style: TextStyle(color: Colors.grey[500], fontSize: 12)),
-                                        ],
-                                      ),
+            // 2. 中央エリア（履歴リスト）
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: history.length,
+                itemBuilder: (context, index) {
+                  final item = history[index];
+                  final Quiz quiz = item['quiz'];
+                  final bool isCorrect = item['result'];
+
+                  return Card(
+                    margin: const EdgeInsets.only(bottom: 12),
+                    elevation: 0,
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      side: BorderSide(color: Colors.grey.withValues(alpha: 0.1)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // 結果アイコン
+                              Icon(
+                                isCorrect ? Icons.check_circle : Icons.cancel,
+                                color: isCorrect ? Colors.green : Colors.red,
+                                size: 28,
+                              ),
+                              const SizedBox(width: 12),
+                              // 問題文
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      quiz.question,
+                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                                     ),
-                                ],
+                                    if (quiz.imagePath != null)
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 4.0),
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.image, size: 16, color: Colors.grey[500]),
+                                            const SizedBox(width: 4),
+                                            Text("画像問題", style: TextStyle(color: Colors.grey[500], fontSize: 12)),
+                                          ],
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 12),
+                          // 解説エリア
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFECEFF1), // 薄い青灰色 (BlueGrey[50])
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              "💡 ${quiz.explanation}",
+                              style: TextStyle(color: Colors.blueGrey[800], fontSize: 13),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+
+            // 3. 下部エリア（固定フッター）
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.05),
+                    blurRadius: 10,
+                    offset: const Offset(0, -5),
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    children: [
+                      // 左ボタン: ミスを確認（全問正解時は非表示）
+                      if (!isPerfect) ...[
+                        Expanded(
+                          child: SizedBox(
+                            height: 56,
+                            child: ElevatedButton.icon(
+                              onPressed: () {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => QuizPage(
+                                      quizzes: incorrectQuizzes,
+                                      isWeaknessReview: true,
+                                      totalQuestions: incorrectQuizzes.length,
+                                    ),
+                                  ),
+                                );
+                              },
+                              icon: const Icon(Icons.refresh),
+                              label: const Text("ミスを確認"),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.orange,
+                                foregroundColor: Colors.white,
+                                elevation: 0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                textStyle: const TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ),
-                          ],
-                        ),
-                        const SizedBox(height: 8),
-                        Container(
-                          width: double.infinity,
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.blueGrey.withValues(alpha: 0.05),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Text(
-                            "💡 ${quiz.explanation}",
-                            style: TextStyle(color: Colors.blueGrey[700], fontSize: 13),
                           ),
                         ),
+                        const SizedBox(width: 12),
                       ],
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
 
-          // バナー広告
-          const AdBanner(adKey: 'result'),
-          
-          Container(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              children: [
-                if (incorrectQuizzes.isNotEmpty)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 12.0),
-                    child: SizedBox(
-                      width: double.infinity,
-                      height: 56,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                                builder: (context) => QuizPage(
-                                  quizzes: incorrectQuizzes,
-                                  // 復習後の続けて復習は、ハイスコアモードではなく、かつ既に苦手克服ロジックが走った後なので
-                                  // 実質「ただの復習」だが、ここでは simple に扱う。
-                                  isWeaknessReview: true, 
-                                  totalQuestions: incorrectQuizzes.length, // 残り全問
-                                ),
+                      // 右ボタン: リトライ（弱点復習モード時はホームに戻る）
+                      Expanded(
+                        child: SizedBox(
+                          height: 56,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              if (isWeaknessReview) {
+                                Navigator.of(context).popUntil((route) => route.isFirst);
+                              } else {
+                                final shuffledAgain = List<Quiz>.from(originalQuizzes)..shuffle();
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => QuizPage(
+                                      quizzes: shuffledAgain,
+                                      categoryKey: categoryKey,
+                                      totalQuestions: shuffledAgain.length,
+                                    ),
+                                  ),
+                                );
+                              }
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              foregroundColor: Colors.blueAccent,
+                              elevation: 0,
+                              side: const BorderSide(color: Colors.blueAccent, width: 2),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              textStyle: const TextStyle(fontWeight: FontWeight.bold),
                             ),
-                          );
-                        },
-                        icon: const Icon(Icons.refresh),
-                        label: const Text("苦手な問題だけ復習"),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange,
-                          foregroundColor: Colors.white,
-                          elevation: 2,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                            child: Text(isWeaknessReview ? "ホームに戻る" : "リトライ"),
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
-
-                SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if (isWeaknessReview) {
-                        Navigator.of(context).popUntil((route) => route.isFirst);
-                        return;
-                      }
-
-                      final shuffledAgain = List<Quiz>.from(originalQuizzes)..shuffle();
-                       Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(
-                          builder: (context) => QuizPage(
-                            quizzes: shuffledAgain,
-                            categoryKey: categoryKey,
-                            totalQuestions: shuffledAgain.length, // シャッフルして同じ問題数
-                          ),
-                        ),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.blueAccent,
-                      elevation: 0,
-                      side: const BorderSide(color: Colors.blueAccent, width: 2),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                       textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                    child: Text(isWeaknessReview ? "ホームに戻る" : "もう一度やる（シャッフル）"),
-                  ),
-                ),
-                
-                if (!isWeaknessReview) ...[
                   const SizedBox(height: 12),
+                  // ホームに戻るリンク
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).popUntil((route) => route.isFirst);
@@ -1178,10 +1403,10 @@ class ResultPage extends StatelessWidget {
                     child: const Text("ホームに戻る", style: TextStyle(color: Colors.grey)),
                   ),
                 ],
-              ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

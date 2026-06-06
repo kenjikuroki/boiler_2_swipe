@@ -3204,7 +3204,9 @@ class _ResultPageState extends State<ResultPage> {
                   ? 'PERFECT! 🎉'
                   : widget.score / widget.total >= 0.8
                       ? '合格圏内！素晴らしい！'
-                      : 'あと少し！復習しよう',
+                      : widget.score / widget.total >= 0.5
+                          ? 'もう少し！頑張ろう！'
+                          : 'まだまだ復習が必要！',
               collapseProgress: _collapseProgress,
             ),
 

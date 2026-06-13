@@ -1,6 +1,9 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:app_tracking_transparency/app_tracking_transparency.dart';
+
+import '../config/local_app_config.dart';
 import 'purchase_manager.dart';
 
 class PreloadedAd {
@@ -21,30 +24,31 @@ class AdManager {
 
   final Map<String, PreloadedAd> _ads = {};
 
-  final String _adUnitId = 'ca-app-pub-3331079517737737/8853800306';
-  
-  // Test ID for debug (optional use)
-  // final String _testAdUnitId = 'ca-app-pub-3940256099942544/6300978111';
+  final String _testBannerAdUnitId = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/6300978111'
+      : 'ca-app-pub-3940256099942544/2934735716';
+  final String _testInterstitialAdUnitId = Platform.isAndroid
+      ? 'ca-app-pub-3940256099942544/1033173712'
+      : 'ca-app-pub-3940256099942544/4411468910';
 
-  Future<void> initializeConsent() async {
-    await AppTrackingTransparency.requestTrackingAuthorization();
-  }
+  String get adUnitId => kDebugMode
+      ? _testBannerAdUnitId
+      : (Platform.isIOS
+            ? LocalAppConfig.iosBannerAdUnitId
+            : LocalAppConfig.androidBannerAdUnitId);
+
+  String get interstitialAdUnitId => kDebugMode
+      ? _testInterstitialAdUnitId
+      : (Platform.isIOS
+            ? LocalAppConfig.iosInterstitialAdUnitId
+            : LocalAppConfig.androidInterstitialAdUnitId);
 
   void preloadAd(String key) {
     if (PurchaseManager.instance.isPremium.value) return;
-
-    if (_ads.containsKey(key)) {
-      // Already preloading or loaded
-      return;
-    }
-
-    // Always use the real ID as requested by user, 
-    // or switch to test ID if strictly debugging.
-    // final unitId = kDebugMode ? _testAdUnitId : _adUnitId;
-    final unitId = _adUnitId;
+    if (_ads.containsKey(key)) return;
 
     final ad = BannerAd(
-      adUnitId: unitId,
+      adUnitId: adUnitId,
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
@@ -65,40 +69,21 @@ class AdManager {
     ad.load();
   }
 
-  PreloadedAd? getAd(String key) {
-    if (PurchaseManager.instance.isPremium.value) return null;
-    return _ads[key];
-  }
-  
-  /// Returns the ad and removes it from manager (transfer ownership)
-  /// If [keep] is true, it retains in manager (shared ownership/singleton usage like Home).
-  PreloadedAd? consumeAd(String key, {bool keep = false}) {
-    if (PurchaseManager.instance.isPremium.value) {
-      disposeAll();
-      return null;
-    }
+  PreloadedAd? getAd(String key) => _ads[key];
 
-    if (keep) {
-      return _ads[key];
-    }
+  PreloadedAd? consumeAd(String key, {bool keep = false}) {
+    if (keep) return _ads[key];
     return _ads.remove(key);
   }
 
-  // Interstitial Ad
   InterstitialAd? _interstitialAd;
-  
-  // Real ID from user screenshot
-  final String _interstitialAdUnitId = 'ca-app-pub-3331079517737737/3779413507';
 
   void preloadInterstitial() {
     if (PurchaseManager.instance.isPremium.value) return;
-
-    // If already loaded or loading, skip? 
-    // Simplified: just try to load if null.
     if (_interstitialAd != null) return;
 
     InterstitialAd.load(
-      adUnitId: _interstitialAdUnitId, 
+      adUnitId: interstitialAdUnitId,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
@@ -113,18 +98,14 @@ class AdManager {
     );
   }
 
-  /// Shows the interstitial ad if available.
-  /// [onComplete] is called when the ad is dismissed or if it fails to show/load.
   void showInterstitial({required VoidCallback onComplete}) {
     if (PurchaseManager.instance.isPremium.value || _interstitialAd == null) {
-      debugPrint('AdManager: No interstitial ready or premium active, skipping.');
       onComplete();
       return;
     }
 
     _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
       onAdDismissedFullScreenContent: (ad) {
-        debugPrint('AdManager: Interstitial dismissed.');
         ad.dispose();
         _interstitialAd = null;
         onComplete();
@@ -138,15 +119,15 @@ class AdManager {
     );
 
     _interstitialAd!.show();
-    // Note: don't set null here immediately, wait for callbacks
   }
 
-  void onPremiumPurchased() {
-    disposeAll();
-  }
-  
+  void setAdUnitIds({
+    required String bannerId,
+    required String interstitialId,
+  }) {}
+
   void disposeAll() {
-    for (var ad in _ads.values) {
+    for (final ad in _ads.values) {
       ad.dispose();
     }
     _ads.clear();

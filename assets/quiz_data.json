@@ -1,105 +1,21 @@
 {
   "part1": [
     {
-      "question": "熱の伝わり方には、「伝導」「対流」「放射（ふく射）」の3種類がある。",
+      "question": "ボイラー水中の懸濁物が多いと、スケールやキャリーオーバーの原因になりうる。",
       "isCorrect": true,
-      "explanation": "正解！ボイラー内部では、これらの現象が組み合わさって水に熱が伝わります。",
+      "explanation": "不純物は障害要因になりやすい。",
       "imagePath": null
     },
     {
-      "question": "水の温度が上昇し、沸騰して蒸気になるために費やされる熱を「顕熱」という。",
+      "question": "炉筒煙管ボイラーでは、燃焼ガスが炉筒と煙管を通って熱を伝える。",
+      "isCorrect": true,
+      "explanation": "煙管の外側が水で、内側を燃焼ガスが通る。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー胴やヘッダなどの圧力部は、圧力に耐える必要がない。",
       "isCorrect": false,
-      "explanation": "不正解！状態変化（水→蒸気）に使われる熱は「潜熱」です。温度上昇に使われるのが「顕熱」です。",
-      "imagePath": null
-    },
-    {
-      "question": "炉筒煙管ボイラーは、内だき式ボイラーの一種であり、構造が複雑で取扱いが難しい。",
-      "isCorrect": false,
-      "explanation": "不正解！炉筒煙管ボイラーは構造が頑丈で、取扱いが比較的容易なため、広く普及しています。",
-      "imagePath": null
-    },
-    {
-      "question": "水管ボイラーは、ドラムと多数の水管で構成され、高圧・大容量のものに適している。",
-      "isCorrect": true,
-      "explanation": "正解！伝熱面積を大きく取れるため、大規模なボイラーに使われます。",
-      "imagePath": null
-    },
-    {
-      "question": "鋳鉄製ボイラーは、鋼製ボイラーに比べて腐食に弱く、寿命が短い。",
-      "isCorrect": false,
-      "explanation": "逆です！鋳鉄（いもの）は鋼よりも「腐食に強い」のが特徴です。ただし、高圧には弱いです。",
-      "imagePath": null
-    },
-    {
-      "question": "貫流ボイラーは、管の一端から給水し、管内を通る間に加熱・蒸発させて、他端から蒸気を取り出す形式である。",
-      "isCorrect": true,
-      "explanation": "正解！ドラム（胴）を持たないのが最大の特徴です。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの伝熱面積の計算において、計測するのは燃焼ガス（熱源）に触れる側の面積である。",
-      "isCorrect": true,
-      "explanation": "正解！水側ではなく「燃焼ガス側」の表面積で計算します（水管ボイラーを除く）。",
-      "imagePath": null
-    },
-    {
-      "question": "炉筒ボイラーの「波形炉筒」は、平形炉筒に比べて熱による伸縮を吸収しにくい。",
-      "isCorrect": false,
-      "explanation": "不正解！波形にすることで「伸縮を吸収しやすく」し、かつ強度を増しています。",
-      "imagePath": null
-    },
-    {
-      "question": "ステー（支え）は、ボイラーの平らな部分（鏡板など）が圧力で変形するのを防ぐために取り付けられる。",
-      "isCorrect": true,
-      "explanation": "正解！ガセットステーや管ステーなどがあります。",
-      "imagePath": null
-    },
-    {
-      "question": "安全弁（スプリング式）は、蒸気圧力が規定値を超えた時に、自動的に蒸気を放出して圧力を下げる装置である。",
-      "isCorrect": true,
-      "explanation": "正解！ボイラー破裂を防ぐ最後の砦です。",
-      "imagePath": null
-    },
-    {
-      "question": "水面計は、ボイラー内の水位を表示する装置であり、原則として1つのボイラーに1個取り付ければよい。",
-      "isCorrect": false,
-      "explanation": "不正解！万が一の故障や見間違いを防ぐため、原則として「2個以上」必要です。",
-      "imagePath": null
-    },
-    {
-      "question": "験水コックは、水面計の機能が疑わしい時に開いて、水面計の水位が正しいか確認するためのものである。",
-      "isCorrect": true,
-      "explanation": "正解！水側と蒸気側のコックを開閉して確認します。",
-      "imagePath": null
-    },
-    {
-      "question": "ブルドン管圧力計のサイホン管は、蒸気が直接ブルドン管に入らないように水を溜めておくためのものである。",
-      "isCorrect": true,
-      "explanation": "正解！高温の蒸気が直接入ると、ブルドン管が熱で変形して誤差が生じるのを防ぎます。",
-      "imagePath": null
-    },
-    {
-      "question": "吹き出し弁（ブロー弁）は、ボイラー水中の不純物を排出したり、水位を下げるために用いられる。",
-      "isCorrect": true,
-      "explanation": "正解！濃縮されたボイラー水を排出します。急開弁と漸開弁があります。",
-      "imagePath": null
-    },
-    {
-      "question": "温水ボイラーには、ボイラー内の圧力が上がりすぎないように「逃がし弁（逃がし管）」を取り付ける。",
-      "isCorrect": true,
-      "explanation": "正解！蒸気ボイラーの安全弁に相当するものです。",
-      "imagePath": null
-    },
-    {
-      "question": "給水ポンプの「渦巻ポンプ」は、低圧・小容量のボイラーには適さない。",
-      "isCorrect": false,
-      "explanation": "不正解！構造が簡単で扱いやすいため、広く使われています。高圧用には多段式が使われます。",
-      "imagePath": null
-    },
-    {
-      "question": "インジェクタは、蒸気の噴射力を利用して給水する装置であり、電力などの動力を必要としない。",
-      "isCorrect": true,
-      "explanation": "正解！予備の給水装置として使われますが、給水温度が高いと作動しにくい欠点があります。",
+      "explanation": "圧力に耐えなければ危険である。",
       "imagePath": null
     },
     {
@@ -109,21 +25,27 @@
       "imagePath": null
     },
     {
-      "question": "ボイラー効率とは、全供給熱量に対する発生蒸気が吸収した熱量の割合のことである。",
+      "question": "水面計は、ボイラー内の水位を表示する装置であり、原則として1つのボイラーに1個取り付ければよい。",
+      "isCorrect": false,
+      "explanation": "不正解！万が一の故障や見間違いを防ぐため、原則として「2個以上」必要です。",
+      "imagePath": null
+    },
+    {
+      "question": "炉筒煙管ボイラーでは、水が煙管の中を流れて熱を受ける。",
+      "isCorrect": false,
+      "explanation": "水が煙管内部を流れるのは水管ボイラーに近い考え方である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー水面計は、蒸気圧だけを確認するための附属品である。",
+      "isCorrect": false,
+      "explanation": "蒸気圧を確認するのは圧力計である。",
+      "imagePath": null
+    },
+    {
+      "question": "伝熱面にスケールが付着すると、熱伝達が悪くなり燃料消費増加の原因になる。",
       "isCorrect": true,
-      "explanation": "正解！(出力/入力)×100 で計算されます。",
-      "imagePath": null
-    },
-    {
-      "question": "自動制御における「シーケンス制御」とは、目標値と現在値を比較して訂正動作を行う制御である。",
-      "isCorrect": false,
-      "explanation": "不正解！それは「フィードバック制御」です。シーケンス制御は、あらかじめ定められた順序に従って動作を進める制御です。",
-      "imagePath": null
-    },
-    {
-      "question": "オンオフ動作による蒸気圧力制御では、蒸気圧力の変動幅（偏差）をゼロにすることができる。",
-      "isCorrect": false,
-      "explanation": "不正解！オンとオフ（燃焼と停止）を繰り返すため、どうしても圧力は波のように変動（サイクリング）します。",
+      "explanation": "スケールは断熱材のように働く。",
       "imagePath": null
     },
     {
@@ -133,129 +55,15 @@
       "imagePath": null
     },
     {
-      "question": "給水加熱器を使用すると、ボイラー本体に熱応力が発生しやすくなる。",
-      "isCorrect": false,
-      "explanation": "逆です！冷たい水を直接入れるより、温めてから入れる方が温度差が小さくなり、熱応力を「防止」できます。",
-      "imagePath": null
-    },
-    {
-      "question": "マンホールは、胴の内径が大きいボイラーにおいて、内部の点検や掃除のために設けられる。",
-      "isCorrect": true,
-      "explanation": "正解！人が入れる大きさの穴です。小さいものは掃除口などと呼ばれます。",
-      "imagePath": null
-    },
-    {
-      "question": "給水弁と給水逆止め弁をボイラーに取り付ける場合、ボイラー本体に近い方に「給水弁」を取り付ける。",
-      "isCorrect": true,
-      "explanation": "正解！ボイラーに近い方から「給水弁（ストップ弁）」→「逆止め弁」の順です。修理時にボイラー内の湯が逆流しないようにするためです。",
-      "imagePath": null
-    },
-    {
-      "question": "水管ボイラーの自然循環は、水と気泡を含んだ水との「比重差（密度差）」によって行われる。",
-      "isCorrect": true,
-      "explanation": "正解！温められて軽くなった水が上昇し、冷たい水が下降することで循環します。",
-      "imagePath": null
-    },
-    {
-      "question": "鋳鉄製ボイラーは、セクション（部分）を組み立てて構成するため、容量の増減が可能である。",
-      "isCorrect": true,
-      "explanation": "正解！搬入も分解して行えるため、狭い場所への設置に適しています。",
-      "imagePath": null
-    },
-    {
-      "question": "丸ボイラーにおいて、煙管（火が通る管）は伝熱面積を減少させるために設けられる。",
-      "isCorrect": false,
-      "explanation": "不正解！煙管を多数設けることで伝熱面積を「増加」させ、効率を良くしています。",
-      "imagePath": null
-    },
-    {
       "question": "空気予熱器を設置すると、燃焼状態が良くなり、炉内温度が上昇する。",
       "isCorrect": true,
       "explanation": "正解！熱い空気で燃やすのでよく燃えます。ただしNOx（窒素酸化物）が増える原因にもなります。",
       "imagePath": null
     },
     {
-      "question": "主蒸気弁（蒸気止め弁）には、抵抗が少ない仕切弁（ゲート弁）よりも、玉形弁（グローブ弁）がよく使われる。",
+      "question": "エコノマイザは、蒸気を冷却して復水に戻す装置である。",
       "isCorrect": false,
-      "explanation": "不正解！気密性が必要な場合もありますが、主蒸気弁には蒸気の抵抗が少ない「仕切弁」や「アングル弁」がよく使われます。",
-      "imagePath": null
-    },
-    {
-      "question": "過熱器は、飽和蒸気をさらに加熱して過熱蒸気を作る装置である。",
-      "isCorrect": true,
-      "explanation": "正解！過熱蒸気は熱効率が高く、配管内でのドレン発生も防げます。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの「全硬度」とは、水中のカルシウム分と鉄分の合計をいう。",
-      "isCorrect": false,
-      "explanation": "不正解！全硬度はカルシウムイオンと「マグネシウムイオン」の合計を換算したものです。",
-      "imagePath": null
-    },
-    {
-      "question": "蒸気セパレータ（気水分離器）は、蒸気の中から水滴を取り除く装置である。",
-      "isCorrect": true,
-      "explanation": "正解！乾き度の高い蒸気を得るためにドラム内に設置されます。",
-      "imagePath": null
-    },
-    {
-      "question": "水管ボイラーのドラムは、管内での蒸発を助けるために、火炎で直接加熱する構造になっている。",
-      "isCorrect": false,
-      "explanation": "不正解！ドラムは直接加熱されない位置（炉外など）に配置されます。直接加熱されるのは水管です。",
-      "imagePath": null
-    },
-    {
-      "question": "スートブロー（煤吹き装置）は、伝熱面に付着した煤を蒸気や空気で吹き飛ばす装置である。",
-      "isCorrect": true,
-      "explanation": "正解！煤が付着すると伝熱効率が落ちるため、定期的に行います。",
-      "imagePath": null
-    },
-    {
-      "question": "「気液平衡」とは、密閉容器内の水と蒸気が、同じ温度・圧力で安定している状態をいう。",
-      "isCorrect": true,
-      "explanation": "正解！この時の温度を飽和温度、圧力を飽和圧力といいます。",
-      "imagePath": null
-    },
-    {
-      "question": "煙道ボイラーは、胴の中に炉筒を設けた「内だき式」のボイラーである。",
-      "isCorrect": true,
-      "explanation": "正解！ランカシャボイラー（2基）やコーニッシュボイラー（1基）があります。",
-      "imagePath": null
-    },
-    {
-      "question": "送風機の「サージング」とは、風量や風圧が周期的に変動し、振動が発生する現象である。",
-      "isCorrect": true,
-      "explanation": "正解！低流量で運転した時などに起こりやすく、破損の原因になります。",
-      "imagePath": null
-    },
-    {
-      "question": "給水タンクは、ボイラーからの戻りドレンを回収し、再利用するためにも使われる。",
-      "isCorrect": true,
-      "explanation": "正解！ドレンは純水に近い温水なので、回収すると燃料費の節約になります。",
-      "imagePath": null
-    },
-    {
-      "question": "水管ボイラーの「ダウンカマ（降水管）」は、加熱されないように炉の外側に設けられることが多い。",
-      "isCorrect": true,
-      "explanation": "正解！自然循環を促進するため、温度の低い水を下降させる役割があります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの「公称蒸発量」は、実際の使用状況に関わらず設計上の最大能力を指す。",
-      "isCorrect": true,
-      "explanation": "正解！カタログスペックとしての能力です。",
-      "imagePath": null
-    },
-    {
-      "question": "空気予熱器の「低温腐食」を防ぐため、排ガスの出口温度は一定以上に保つ必要がある。",
-      "isCorrect": true,
-      "explanation": "正解！温度を下げすぎると水分が結露し、硫酸が発生して腐食します。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの外壁に用いる「保温材」は、熱伝導率が大きい材料ほど良い。",
-      "isCorrect": false,
-      "explanation": "不正解！熱を逃がさないようにするため、熱伝導率が「小さい」材料（断熱材）を用います。",
+      "explanation": "復水器とは役割が異なる。",
       "imagePath": null
     },
     {
@@ -265,9 +73,381 @@
       "imagePath": null
     },
     {
-      "question": "「給水加熱器」には、排ガスを利用するものと、抽気（蒸気）を利用するものがある。",
+      "question": "ボイラー水中の懸濁物が多いほど、常に熱伝達は改善する。",
+      "isCorrect": false,
+      "explanation": "熱伝達改善に直結するわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの附属品は、圧力・水位・給水・吹出しなどの安全管理に関係する。",
       "isCorrect": true,
-      "explanation": "正解！排ガス利用はエコノマイザ、蒸気利用は給水加熱器と呼び分けられます。",
+      "explanation": "附属品は安全運転に直結する。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの構造を理解することは、異常時の原因推定や安全運転に役立つ。",
+      "isCorrect": true,
+      "explanation": "構造理解は判断力向上に直結する。",
+      "imagePath": null
+    },
+    {
+      "question": "低水位検出装置は、煙道ガス中の酸素濃度を知らせる。",
+      "isCorrect": false,
+      "explanation": "酸素濃度計ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "丸ボイラーにおいて、煙管（火が通る管）は伝熱面積を減少させるために設けられる。",
+      "isCorrect": false,
+      "explanation": "不正解！煙管を多数設けることで伝熱面積を「増加」させ、効率を良くしています。",
+      "imagePath": null
+    },
+    {
+      "question": "伝熱面にスケールが付着すると、熱伝達が良くなり燃料消費は減る。",
+      "isCorrect": false,
+      "explanation": "熱効率を悪化させる。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの「公称蒸発量」は、実際の使用状況に関わらず設計上の最大能力を指す。",
+      "isCorrect": true,
+      "explanation": "正解！カタログスペックとしての能力です。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー胴の内部では、蒸気と水を適切に分離することが重要である。",
+      "isCorrect": true,
+      "explanation": "蒸気の乾き度確保には分離が必要である。",
+      "imagePath": null
+    },
+    {
+      "question": "エコノマイザは、排ガスの熱を利用して給水を予熱する装置である。",
+      "isCorrect": true,
+      "explanation": "給水予熱で熱効率向上を図る。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの水循環が悪いほど、伝熱面の局部過熱を防ぎやすい。",
+      "isCorrect": false,
+      "explanation": "悪い循環は危険である。",
+      "imagePath": null
+    },
+    {
+      "question": "給水逆止め弁は、ボイラー内の水や圧力が給水管側へ逆流するのを防ぐ。",
+      "isCorrect": true,
+      "explanation": "給水系の逆流防止用である。",
+      "imagePath": null
+    },
+    {
+      "question": "オンオフ動作による蒸気圧力制御では、蒸気圧力の変動幅（偏差）をゼロにすることができる。",
+      "isCorrect": false,
+      "explanation": "不正解！オンとオフ（燃焼と停止）を繰り返すため、どうしても圧力は波のように変動（サイクリング）します。",
+      "imagePath": null
+    },
+    {
+      "question": "炉筒煙管ボイラーは、内だき式ボイラーの一種であり、構造が複雑で取扱いが難しい。",
+      "isCorrect": false,
+      "explanation": "不正解！炉筒煙管ボイラーは構造が頑丈で、取扱いが比較的容易なため、広く普及しています。",
+      "imagePath": null
+    },
+    {
+      "question": "炉筒ボイラーの「波形炉筒」は、平形炉筒に比べて熱による伸縮を吸収しにくい。",
+      "isCorrect": false,
+      "explanation": "不正解！波形にすることで「伸縮を吸収しやすく」し、かつ強度を増しています。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気だめは、常に燃料油を一時貯蔵する役割を持つ。",
+      "isCorrect": false,
+      "explanation": "燃料油タンクではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー胴の内部では、蒸気と水をできるだけ混合することが重要である。",
+      "isCorrect": false,
+      "explanation": "混合が進むとキャリーオーバーの原因になる。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気セパレータ（気水分離器）は、蒸気の中から水滴を取り除く装置である。",
+      "isCorrect": true,
+      "explanation": "正解！乾き度の高い蒸気を得るためにドラム内に設置されます。",
+      "imagePath": null
+    },
+    {
+      "question": "空気予熱器は、給水中の酸素を除去するための装置である。",
+      "isCorrect": false,
+      "explanation": "脱気器とは別の装置である。",
+      "imagePath": null
+    },
+    {
+      "question": "炉壁の耐火材は、熱損失の低減や炉内保護に役立つ。",
+      "isCorrect": true,
+      "explanation": "断熱と保護が主な目的である。",
+      "imagePath": null
+    },
+    {
+      "question": "水の温度が上昇し、沸騰して蒸気になるために費やされる熱を「顕熱」という。",
+      "isCorrect": false,
+      "explanation": "不正解！状態変化（水→蒸気）に使われる熱は「潜熱」です。温度上昇に使われるのが「顕熱」です。",
+      "imagePath": null
+    },
+    {
+      "question": "空気予熱器の「低温腐食」を防ぐため、排ガスの出口温度は一定以上に保つ必要がある。",
+      "isCorrect": true,
+      "explanation": "正解！温度を下げすぎると水分が結露し、硫酸が発生して腐食します。",
+      "imagePath": null
+    },
+    {
+      "question": "験水コックは、水面計の機能が疑わしい時に開いて、水面計の水位が正しいか確認するためのものである。",
+      "isCorrect": true,
+      "explanation": "正解！水側と蒸気側のコックを開閉して確認します。",
+      "imagePath": null
+    },
+    {
+      "question": "水管ボイラーの「ダウンカマ（降水管）」は、加熱されないように炉の外側に設けられることが多い。",
+      "isCorrect": true,
+      "explanation": "正解！自然循環を促進するため、温度の低い水を下降させる役割があります。",
+      "imagePath": null
+    },
+    {
+      "question": "スートブロー（煤吹き装置）は、伝熱面に付着した煤を蒸気や空気で吹き飛ばす装置である。",
+      "isCorrect": true,
+      "explanation": "正解！煤が付着すると伝熱効率が落ちるため、定期的に行います。",
+      "imagePath": null
+    },
+    {
+      "question": "給水タンクは、ボイラーからの戻りドレンを回収し、再利用するためにも使われる。",
+      "isCorrect": true,
+      "explanation": "正解！ドレンは純水に近い温水なので、回収すると燃料費の節約になります。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの附属品は、主として建屋の照明管理のために設けられる。",
+      "isCorrect": false,
+      "explanation": "照明設備とは別である。",
+      "imagePath": null
+    },
+    {
+      "question": "煙道ボイラーは、胴の中に炉筒を設けた「内だき式」のボイラーである。",
+      "isCorrect": true,
+      "explanation": "正解！ランカシャボイラー（2基）やコーニッシュボイラー（1基）があります。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー胴やヘッダなどの圧力部は、圧力に耐える構造が求められる。",
+      "isCorrect": true,
+      "explanation": "圧力容器としての強度が重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "低水位検出装置は、ボイラー水位が危険域に下がったことを知らせる。",
+      "isCorrect": true,
+      "explanation": "水位低下の早期把握に使う。",
+      "imagePath": null
+    },
+    {
+      "question": "水管ボイラーのドラムは、管内での蒸発を助けるために、火炎で直接加熱する構造になっている。",
+      "isCorrect": false,
+      "explanation": "不正解！ドラムは直接加熱されない位置（炉外など）に配置されます。直接加熱されるのは水管です。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気管の断熱は、熱損失低減や作業者の火傷防止に役立つ。",
+      "isCorrect": true,
+      "explanation": "断熱は省エネと安全に有効である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの「全硬度」とは、水中のカルシウム分と鉄分の合計をいう。",
+      "isCorrect": false,
+      "explanation": "不正解！全硬度はカルシウムイオンと「マグネシウムイオン」の合計を換算したものです。",
+      "imagePath": null
+    },
+    {
+      "question": "水管ボイラーは、ドラムと多数の水管で構成され、高圧・大容量のものに適している。",
+      "isCorrect": true,
+      "explanation": "正解！伝熱面積を大きく取れるため、大規模なボイラーに使われます。",
+      "imagePath": null
+    },
+    {
+      "question": "インジェクタは、蒸気の噴射力を利用して給水する装置であり、電力などの動力を必要としない。",
+      "isCorrect": true,
+      "explanation": "正解！予備の給水装置として使われますが、給水温度が高いと作動しにくい欠点があります。",
+      "imagePath": null
+    },
+    {
+      "question": "炉壁の耐火材は、ボイラー水の硬度を下げるために使う。",
+      "isCorrect": false,
+      "explanation": "水質調整剤ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "鋳鉄製ボイラーは、セクション（部分）を組み立てて構成するため、容量の増減が可能である。",
+      "isCorrect": true,
+      "explanation": "正解！搬入も分解して行えるため、狭い場所への設置に適しています。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼室は、燃料と空気が燃えて高温ガスを発生させる部分である。",
+      "isCorrect": true,
+      "explanation": "燃焼の中心となる部分である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの水循環が良好であるほど、伝熱面の局部過熱を防ぎやすい。",
+      "isCorrect": true,
+      "explanation": "循環不良は焼損や過熱の原因となる。",
+      "imagePath": null
+    },
+    {
+      "question": "過熱器は、給水を飽和水にする装置である。",
+      "isCorrect": false,
+      "explanation": "給水加熱の主用途ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー効率とは、全供給熱量に対する発生蒸気が吸収した熱量の割合のことである。",
+      "isCorrect": true,
+      "explanation": "正解！(出力/入力)×100 で計算されます。",
+      "imagePath": null
+    },
+    {
+      "question": "マンホールは、胴の内径が大きいボイラーにおいて、内部の点検や掃除のために設けられる。",
+      "isCorrect": true,
+      "explanation": "正解！人が入れる大きさの穴です。小さいものは掃除口などと呼ばれます。",
+      "imagePath": null
+    },
+    {
+      "question": "マンホールや掃除穴は、運転中に蒸気を逃がすために設けられる。",
+      "isCorrect": false,
+      "explanation": "蒸気放出用途ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "送風機の「サージング」とは、風量や風圧が周期的に変動し、振動が発生する現象である。",
+      "isCorrect": true,
+      "explanation": "正解！低流量で運転した時などに起こりやすく、破損の原因になります。",
+      "imagePath": null
+    },
+    {
+      "question": "煙管ボイラーは、一般に水管ボイラーより高圧・大容量に適する。",
+      "isCorrect": false,
+      "explanation": "高圧・大容量に適するのは一般に水管ボイラーである。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの水側では、腐食防止のために水処理は不要である。",
+      "isCorrect": false,
+      "explanation": "無処理運転は障害の原因になる。",
+      "imagePath": null
+    },
+    {
+      "question": "主蒸気弁は、炉内への空気量だけを調整する弁である。",
+      "isCorrect": false,
+      "explanation": "空気量調整弁ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "主蒸気弁は、ボイラーから使用先へ送る蒸気の流れを開閉する。",
+      "isCorrect": true,
+      "explanation": "蒸気の送出制御に用いる。",
+      "imagePath": null
+    },
+    {
+      "question": "熱の伝わり方には、「伝導」「対流」「放射（ふく射）」の3種類がある。",
+      "isCorrect": true,
+      "explanation": "正解！ボイラー内部では、これらの現象が組み合わさって水に熱が伝わります。",
+      "imagePath": null
+    },
+    {
+      "question": "水管ボイラーは、一般に伝熱面積を大きくしやすく、高圧・大容量に適する。",
+      "isCorrect": true,
+      "explanation": "水管ボイラーは高圧・大容量用途で広く使われる。",
+      "imagePath": null
+    },
+    {
+      "question": "安全弁の「リフト」とは、弁体が弁座から持ち上がる高さのことである。",
+      "isCorrect": true,
+      "explanation": "正解！この高さによって蒸気の放出量が決まります。",
+      "imagePath": null
+    },
+    {
+      "question": "マンホールや掃除穴は、点検・清掃・整備のために設けられる。",
+      "isCorrect": true,
+      "explanation": "内部点検や清掃のための開口部である。",
+      "imagePath": null
+    },
+    {
+      "question": "主蒸気弁（蒸気止め弁）には、抵抗が少ない仕切弁（ゲート弁）よりも、玉形弁（グローブ弁）がよく使われる。",
+      "isCorrect": false,
+      "explanation": "不正解！気密性が必要な場合もありますが、主蒸気弁には蒸気の抵抗が少ない「仕切弁」や「アングル弁」がよく使われます。",
+      "imagePath": null
+    },
+    {
+      "question": "鋳鉄製ボイラーは、鋼製ボイラーに比べて腐食に弱く、寿命が短い。",
+      "isCorrect": false,
+      "explanation": "逆です！鋳鉄（いもの）は鋼よりも「腐食に強い」のが特徴です。ただし、高圧には弱いです。",
+      "imagePath": null
+    },
+    {
+      "question": "圧力計には、通常、常用圧力を示す位置が分かるよう印が付される。",
+      "isCorrect": true,
+      "explanation": "圧力計は常用圧力を視認しやすくする。",
+      "imagePath": null
+    },
+    {
+      "question": "ブルドン管圧力計のサイホン管は、蒸気が直接ブルドン管に入らないように水を溜めておくためのものである。",
+      "isCorrect": true,
+      "explanation": "正解！高温の蒸気が直接入ると、ブルドン管が熱で変形して誤差が生じるのを防ぎます。",
+      "imagePath": null
+    },
+    {
+      "question": "安全弁は、ボイラー圧力が異常上昇したとき自動的に蒸気を逃がす装置である。",
+      "isCorrect": true,
+      "explanation": "安全弁は過圧防止装置である。",
+      "imagePath": null
+    },
+    {
+      "question": "吹出し装置は、燃料油中の不純物を排出するのに用いる。",
+      "isCorrect": false,
+      "explanation": "燃料油の清浄とは用途が異なる。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの水側には腐食防止の観点から適切な水処理が必要である。",
+      "isCorrect": true,
+      "explanation": "水処理は腐食やスケール防止に重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気だめは、比較的乾いた蒸気を取り出しやすくする役割を持つ。",
+      "isCorrect": true,
+      "explanation": "蒸気側の安定確保に役立つ。",
+      "imagePath": null
+    },
+    {
+      "question": "貫流ボイラーは、管の一端から給水し、管内を通る間に加熱・蒸発させて、他端から蒸気を取り出す形式である。",
+      "isCorrect": true,
+      "explanation": "正解！ドラム（胴）を持たないのが最大の特徴です。",
+      "imagePath": null
+    },
+    {
+      "question": "給水加熱器を使用すると、ボイラー本体に熱応力が発生しやすくなる。",
+      "isCorrect": false,
+      "explanation": "逆です！冷たい水を直接入れるより、温めてから入れる方が温度差が小さくなり、熱応力を「防止」できます。",
+      "imagePath": null
+    },
+    {
+      "question": "空気予熱器は、燃焼用空気を温めて燃焼効率の向上に寄与する。",
+      "isCorrect": true,
+      "explanation": "燃焼用空気の予熱に使う。",
+      "imagePath": null
+    },
+    {
+      "question": "「気液平衡」とは、密閉容器内の水と蒸気が、同じ温度・圧力で安定している状態をいう。",
+      "isCorrect": true,
+      "explanation": "正解！この時の温度を飽和温度、圧力を飽和圧力といいます。",
       "imagePath": null
     },
     {
@@ -277,15 +457,99 @@
       "imagePath": null
     },
     {
-      "question": "スチームトラップの「ディスク式」は、ドレンと蒸気の流速差（圧力差）を利用して作動する。",
-      "isCorrect": true,
-      "explanation": "正解！構造がシンプルで小型なのが特徴です。",
+      "question": "ボイラーの外壁に用いる「保温材」は、熱伝導率が大きい材料ほど良い。",
+      "isCorrect": false,
+      "explanation": "不正解！熱を逃がさないようにするため、熱伝導率が「小さい」材料（断熱材）を用います。",
       "imagePath": null
     },
     {
-      "question": "炉壁などに使われる「耐火れんが」は、高温に耐えるだけでなく、急激な温度変化（スポーリング）にも強い必要がある。",
+      "question": "吹き出し弁（ブロー弁）は、ボイラー水中の不純物を排出したり、水位を下げるために用いられる。",
       "isCorrect": true,
-      "explanation": "正解！熱衝撃で割れないことが重要です。",
+      "explanation": "正解！濃縮されたボイラー水を排出します。急開弁と漸開弁があります。",
+      "imagePath": null
+    },
+    {
+      "question": "過熱器は、飽和蒸気をさらに加熱して過熱蒸気にする装置である。",
+      "isCorrect": true,
+      "explanation": "過熱器は蒸気温度を上げる。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー水面計は、実際の水位を直接確認するための重要な附属品である。",
+      "isCorrect": true,
+      "explanation": "水面計は水位監視に用いる。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの伝熱面積の計算において、計測するのは燃焼ガス（熱源）に触れる側の面積である。",
+      "isCorrect": true,
+      "explanation": "正解！水側ではなく「燃焼ガス側」の表面積で計算します（水管ボイラーを除く）。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの構造は、日常運転には無関係なので理解しなくてよい。",
+      "isCorrect": false,
+      "explanation": "構造を知らないと異常対応が難しい。",
+      "imagePath": null
+    },
+    {
+      "question": "水管ボイラーの自然循環は、水と気泡を含んだ水との「比重差（密度差）」によって行われる。",
+      "isCorrect": true,
+      "explanation": "正解！温められて軽くなった水が上昇し、冷たい水が下降することで循環します。",
+      "imagePath": null
+    },
+    {
+      "question": "給水逆止め弁は、燃焼ガスが煙道へ逆流するのを防ぐ。",
+      "isCorrect": false,
+      "explanation": "煙道の逆流防止とは無関係である。",
+      "imagePath": null
+    },
+    {
+      "question": "安全弁は、給水量を自動的に増やして圧力上昇を防ぐ装置である。",
+      "isCorrect": false,
+      "explanation": "給水制御と安全弁の役割は異なる。",
+      "imagePath": null
+    },
+    {
+      "question": "過熱器は、飽和蒸気をさらに加熱して過熱蒸気を作る装置である。",
+      "isCorrect": true,
+      "explanation": "正解！過熱蒸気は熱効率が高く、配管内でのドレン発生も防げます。",
+      "imagePath": null
+    },
+    {
+      "question": "給水ポンプの「渦巻ポンプ」は、低圧・小容量のボイラーには適さない。",
+      "isCorrect": false,
+      "explanation": "不正解！構造が簡単で扱いやすいため、広く使われています。高圧用には多段式が使われます。",
+      "imagePath": null
+    },
+    {
+      "question": "安全弁（スプリング式）は、蒸気圧力が規定値を超えた時に、自動的に蒸気を放出して圧力を下げる装置である。",
+      "isCorrect": true,
+      "explanation": "正解！ボイラー破裂を防ぐ最後の砦です。",
+      "imagePath": null
+    },
+    {
+      "question": "温水ボイラーには、ボイラー内の圧力が上がりすぎないように「逃がし弁（逃がし管）」を取り付ける。",
+      "isCorrect": true,
+      "explanation": "正解！蒸気ボイラーの安全弁に相当するものです。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼室は、給水中の溶存酸素を化学的に除去する部分である。",
+      "isCorrect": false,
+      "explanation": "脱酸素処理の装置ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気管の断熱は、蒸気圧を意図的に急上昇させるために行う。",
+      "isCorrect": false,
+      "explanation": "圧力急上昇を目的にするものではない。",
+      "imagePath": null
+    },
+    {
+      "question": "自動制御における「シーケンス制御」とは、目標値と現在値を比較して訂正動作を行う制御である。",
+      "isCorrect": false,
+      "explanation": "不正解！それは「フィードバック制御」です。シーケンス制御は、あらかじめ定められた順序に従って動作を進める制御です。",
       "imagePath": null
     },
     {
@@ -295,41 +559,59 @@
       "imagePath": null
     },
     {
-      "question": "安全弁の「リフト」とは、弁体が弁座から持ち上がる高さのことである。",
+      "question": "炉壁などに使われる「耐火れんが」は、高温に耐えるだけでなく、急激な温度変化（スポーリング）にも強い必要がある。",
       "isCorrect": true,
-      "explanation": "正解！この高さによって蒸気の放出量が決まります。",
+      "explanation": "正解！熱衝撃で割れないことが重要です。",
+      "imagePath": null
+    },
+    {
+      "question": "ステー（支え）は、ボイラーの平らな部分（鏡板など）が圧力で変形するのを防ぐために取り付けられる。",
+      "isCorrect": true,
+      "explanation": "正解！ガセットステーや管ステーなどがあります。",
+      "imagePath": null
+    },
+    {
+      "question": "吹出し装置は、ボイラー水中の濃縮不純物や沈殿物を排出するのに用いる。",
+      "isCorrect": true,
+      "explanation": "吹出しはボイラー水管理に使う。",
+      "imagePath": null
+    },
+    {
+      "question": "給水弁と給水逆止め弁をボイラーに取り付ける場合、ボイラー本体に近い方に「給水弁」を取り付ける。",
+      "isCorrect": true,
+      "explanation": "正解！ボイラーに近い方から「給水弁（ストップ弁）」→「逆止め弁」の順です。修理時にボイラー内の湯が逆流しないようにするためです。",
+      "imagePath": null
+    },
+    {
+      "question": "スチームトラップの「ディスク式」は、ドレンと蒸気の流速差（圧力差）を利用して作動する。",
+      "isCorrect": true,
+      "explanation": "正解！構造がシンプルで小型なのが特徴です。",
+      "imagePath": null
+    },
+    {
+      "question": "圧力計には、常用圧力を示す印を付す必要はない。",
+      "isCorrect": false,
+      "explanation": "常用圧力の目印は運転監視上重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "「給水加熱器」には、排ガスを利用するものと、抽気（蒸気）を利用するものがある。",
+      "isCorrect": true,
+      "explanation": "正解！排ガス利用はエコノマイザ、蒸気利用は給水加熱器と呼び分けられます。",
       "imagePath": null
     }
   ],
   "part2": [
     {
-      "question": "点火前には、炉内および煙道の「プレパージ（換気）」を行い、残留ガスを排出する。",
+      "question": "失火したときは、再点火前に必要な安全確認を行う。",
       "isCorrect": true,
-      "explanation": "正解！未燃焼ガスが残っていると、点火時に爆発（バックファイア）する危険があります。",
+      "explanation": "未燃ガス残留の確認が必要である。",
       "imagePath": null
     },
     {
-      "question": "水位計（水面計）の機能試験は、点火直後に行うのが最も適切である。",
-      "isCorrect": false,
-      "explanation": "不正解！点火前（圧力が上がる前）と、圧力が上がり始めた時の2回行うのが基本です。",
-      "imagePath": null
-    },
-    {
-      "question": "「プライミング」とは、ボイラー水の中に気泡が多く発生し、水面が泡立つ現象のことである。",
-      "isCorrect": false,
-      "explanation": "不正解！それは「フォーミング」です。プライミングは、沸騰が激しくなり水滴が蒸気に混じって飛び出すことです。",
-      "imagePath": null
-    },
-    {
-      "question": "「キャリオーバ」が発生すると、蒸気の純度が低下し、配管やバルブの腐食・摩耗の原因となる。",
+      "question": "水位計・圧力計・燃焼計器の指示を総合して運転状態を判断する。",
       "isCorrect": true,
-      "explanation": "正解！不純物が蒸気と一緒に運ばれてしまう現象です。過負荷運転などが原因です。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの水位が安全低水面以下に低下した（異常低水位）ときは、直ちに給水を行い、水位を回復させる。",
-      "isCorrect": false,
-      "explanation": "絶対ダメ！空だき状態で急に給水すると、ボイラーが破損・爆発する危険があります。まずは「燃焼を停止」します。",
+      "explanation": "複数情報の照合が大切である。",
       "imagePath": null
     },
     {
@@ -339,201 +621,9 @@
       "imagePath": null
     },
     {
-      "question": "ウォータハンマ（水撃作用）は、蒸気管内にドレン（水）が溜まっている時に、急に蒸気弁を開くと発生しやすい。",
+      "question": "ボイラー水位が見えにくいときは、水面計の洗浄や吹きを適切に行う。",
       "isCorrect": true,
-      "explanation": "正解！「カンカン！」という金属音がし、配管が破損することもあります。弁はゆっくり開けます。",
-      "imagePath": null
-    },
-    {
-      "question": "スートブロー（煤吹き）を行うときは、燃焼を停止するか、低燃焼の状態で行う。",
-      "isCorrect": false,
-      "explanation": "逆です！火が消えないよう、負荷を少し高くして（燃焼を安定させて）から行います。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーを長期間使用しない場合の保存法として、「乾燥保存法」と「満水保存法」がある。",
-      "isCorrect": true,
-      "explanation": "正解！乾燥保存は水を抜いて乾燥剤を入れます。満水保存は水を満たして薬剤を入れます。",
-      "imagePath": null
-    },
-    {
-      "question": "乾燥保存法は、期間が比較的短い場合や、凍結の恐れがある場合に適している。",
-      "isCorrect": false,
-      "explanation": "不正解！乾燥保存は「長期間」向けです。凍結の恐れがある場合には適しています（水がないので凍らない）。",
-      "imagePath": null
-    },
-    {
-      "question": "満水保存法では、ボイラー水のpHを酸性に保つ。",
-      "isCorrect": false,
-      "explanation": "不正解！腐食を防ぐため、アルカリ性（pH11〜12程度）に保ちます。",
-      "imagePath": null
-    },
-    {
-      "question": "安全弁の手動試験（吹き出し試験）は、作動圧力に近い、十分な圧力がある状態で行う。",
-      "isCorrect": true,
-      "explanation": "正解！圧力が低すぎると吹き止まらなくなることがあるため、作動圧力に近い状態で行います。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー水のpHが低い（酸性）と、腐食が発生しやすくなる。",
-      "isCorrect": true,
-      "explanation": "正解！一般的にボイラー水はpH11〜11.8程度のアルカリ性に調整します。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー水中の「溶存酸素」は、点食（ピッティング）の原因となる。",
-      "isCorrect": true,
-      "explanation": "正解！酸素は鉄を錆びさせます。脱酸素剤などで除去します。",
-      "imagePath": null
-    },
-    {
-      "question": "スケール（水あか）が伝熱面に付着すると、熱伝導が悪くなり、ボイラー効率が低下するが、過熱事故の原因にはならない。",
-      "isCorrect": false,
-      "explanation": "不正解！熱が伝わらず金属壁の温度が上がりすぎ、膨出や破裂（過熱事故）の原因になります。",
-      "imagePath": null
-    },
-    {
-      "question": "点火に失敗した場合は、直ちに再点火を行う。",
-      "isCorrect": false,
-      "explanation": "危険です！未燃ガスが残っている可能性があるため、必ず「換気（プレパージ）」をしてから再点火します。",
-      "imagePath": null
-    },
-    {
-      "question": "ガラス水面計が破損したときは、まず水側のコックを閉め、次に蒸気側のコックを閉める。",
-      "isCorrect": true,
-      "explanation": "正解！水漏れの方が危険（熱湯が出る）なので、水側から止めます。",
-      "imagePath": null
-    },
-    {
-      "question": "圧力計の内部には、蒸気が直接入らないように「水」を溜めておく。",
-      "isCorrect": true,
-      "explanation": "正解！サイホン管などに水を溜め、高温蒸気による計器の故障を防ぎます。",
-      "imagePath": null
-    },
-    {
-      "question": "バックファイア（逆火）は、燃焼室内での着火遅れや、未燃ガスの充満などが原因で起こる。",
-      "isCorrect": true,
-      "explanation": "正解！「ボン！」という爆発音とともに火が吹き出す現象です。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの「濃縮」を防ぐために、底面吹き出し（ボトムブロー）を行う。",
-      "isCorrect": true,
-      "explanation": "正解！底部に溜まったスラッジ（泥状の不純物）や濃縮された水を排出します。",
-      "imagePath": null
-    },
-    {
-      "question": "安全弁が作動して蒸気が噴き出した場合は、直ちに元弁（止め弁）を閉じて蒸気を止める。",
-      "isCorrect": false,
-      "explanation": "絶対ダメ！安全弁とボイラーの間には、いかなる弁も設けてはいけません（閉じると爆発します）。",
-      "imagePath": null
-    },
-    {
-      "question": "給水温度が低すぎると、煙道の低温腐食の原因となる。",
-      "isCorrect": true,
-      "explanation": "正解！排ガス中の水分が結露して、硫黄分と混ざり硫酸になります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー運転中に停電が発生した場合は、主蒸気弁を全開にして圧力を下げる。",
-      "isCorrect": false,
-      "explanation": "不正解！まず燃料供給を停止し、圧力の上昇を監視しながら、状況に応じて蒸気弁を操作します。急激な圧力変動は避けます。",
-      "imagePath": null
-    },
-    {
-      "question": "清缶剤（ボイラーコンパウンド）は、ボイラー水のpH調整や軟化のために投入される。",
-      "isCorrect": true,
-      "explanation": "正解！スケールの付着防止や腐食防止の役割があります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの運転終了時は、給水を行って水位を「常用水位」よりもやや高めにしておく。",
-      "isCorrect": true,
-      "explanation": "正解！冷却により水位が下がるためです。ただし、高水位にしすぎるとキャリオーバの原因となるため注意が必要です。",
-      "imagePath": null
-    },
-    {
-      "question": "燃焼量を急激に増減させると、キャリオーバの原因となる。",
-      "isCorrect": true,
-      "explanation": "正解！水面が安定せず、蒸気に水滴が混入しやすくなります。",
-      "imagePath": null
-    },
-    {
-      "question": "水面計の水位が上下に動いていない場合、配管の詰まりやコックの閉止が疑われる。",
-      "isCorrect": true,
-      "explanation": "正解！正常なら、燃焼中の水面は細かく上下に動いています。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー効率を上げるためには、空気比をできるだけ「1」に近づけるのがよい。",
-      "isCorrect": true,
-      "explanation": "正解！理論空気量（1.0）に近いほど無駄な空気が少なく、熱損失が減ります（実際は1.1〜1.3程度で運転します）。",
-      "imagePath": null
-    },
-    {
-      "question": "重油を予熱する際、温度が高すぎると「ベーパロック（気泡による閉塞）」を起こすことがある。",
-      "isCorrect": true,
-      "explanation": "正解！配管内で油が気化してしまう現象です。逆に低すぎると霧化不良になります。",
-      "imagePath": null
-    },
-    {
-      "question": "脱気器は、給水中のマグネシウムやカルシウムを除去する装置である。",
-      "isCorrect": false,
-      "explanation": "不正解！脱気器は「酸素や二酸化炭素」などの気体を除去します。ミネラル分を除去するのは「軟水装置」です。",
-      "imagePath": null
-    },
-    {
-      "question": "「スカミング」とは、ボイラー水表面に浮遊した浮遊物を排出する操作のことである。",
-      "isCorrect": true,
-      "explanation": "正解！水面吹き出し（表面ブロー）によって行われます。",
-      "imagePath": null
-    },
-    {
-      "question": "軟水装置で用いるイオン交換樹脂が劣化した場合は、食塩水で再生（リジェネレーション）を行う。",
-      "isCorrect": true,
-      "explanation": "正解！ナトリウムイオンを補充して能力を回復させます。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー点火直後に炎が安定しない場合は、すぐに燃料を増やすとよい。",
-      "isCorrect": false,
-      "explanation": "危険です！未燃ガスが溜まってバックファイアの原因になるため、まずは空気量や温度を確認します。",
-      "imagePath": null
-    },
-    {
-      "question": "「全溶解固形物（TDS）」の濃度が高くなると、キャリオーバが発生しやすくなる。",
-      "isCorrect": true,
-      "explanation": "正解！不純物が多いと泡立ちやすくなるためです。",
-      "imagePath": null
-    },
-    {
-      "question": "「冷態起動」とは、ボイラーが十分に冷えた状態から点火・昇圧することである。",
-      "isCorrect": true,
-      "explanation": "正解！急激な加熱を避け、熱応力を抑えるためゆっくり行います。",
-      "imagePath": null
-    },
-    {
-      "question": "蒸気弁を閉める際、力まかせに締め付けると弁体や弁座を傷める原因となる。",
-      "isCorrect": true,
-      "explanation": "正解！軽く当たったところから少し増し締めする程度が基本です。",
-      "imagePath": null
-    },
-    {
-      "question": "水打ち試験（満水試験）は、ボイラーの新設時や大修理後に行われる漏洩確認試験である。",
-      "isCorrect": true,
-      "explanation": "正解！圧力試験の一種です。",
-      "imagePath": null
-    },
-    {
-      "question": "脱気器において、給水を加熱するのは、酸素などの気体の溶解度を下げるためである。",
-      "isCorrect": true,
-      "explanation": "正解！水温が上がると気体は溶けにくくなる性質を利用しています。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーを停止させる際、ファン（送風機）は点火停止後もしばらく運転して換気を行う。",
-      "isCorrect": true,
-      "explanation": "正解！ポストパージといい、残留ガスを排出して安全を確保します。",
+      "explanation": "水位不明のまま運転してはならない。",
       "imagePath": null
     },
     {
@@ -543,21 +633,15 @@
       "imagePath": null
     },
     {
-      "question": "ガラス水面計のコックが詰まった場合、ドレン弁を開いても水面が動かない。",
+      "question": "点火前には、炉内および煙道の「プレパージ（換気）」を行い、残留ガスを排出する。",
       "isCorrect": true,
-      "explanation": "正解！詰まりを解消する「機能試験」が必要です。",
+      "explanation": "正解！未燃焼ガスが残っていると、点火時に爆発（バックファイア）する危険があります。",
       "imagePath": null
     },
     {
-      "question": "「腐食抑制剤（インヒビター）」は、金属表面に皮膜を作って腐食を防ぐ薬剤である。",
+      "question": "ボイラーを停止させる際、ファン（送風機）は点火停止後もしばらく運転して換気を行う。",
       "isCorrect": true,
-      "explanation": "正解！皮膜によって水と金属が直接触れるのを防ぎます。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー運転中に安全弁から微量の漏れがある場合、ハンマーで叩いて直すとよい。",
-      "isCorrect": false,
-      "explanation": "絶対ダメ！弁を傷めるだけでなく、突然の噴出を招く恐れがあり非常に危険です。",
+      "explanation": "正解！ポストパージといい、残留ガスを排出して安全を確保します。",
       "imagePath": null
     },
     {
@@ -567,21 +651,261 @@
       "imagePath": null
     },
     {
-      "question": "水管ボイラーの管壁温度が高くなりすぎると、クリープ変形や破裂の原因となる。",
+      "question": "ウォータハンマ（水撃作用）は、蒸気管内にドレン（水）が溜まっている時に、急に蒸気弁を開くと発生しやすい。",
       "isCorrect": true,
-      "explanation": "正解！スケール付着や水不足が原因で起こります。",
+      "explanation": "正解！「カンカン！」という金属音がし、配管が破損することもあります。弁はゆっくり開けます。",
       "imagePath": null
     },
     {
-      "question": "「逆止弁」の動作が悪いと、給水停止時にボイラー内の水が給水管側へ逆流する恐れがある。",
-      "isCorrect": true,
-      "explanation": "正解！そのため給水弁と併用されます。",
+      "question": "燃料切換え時は、燃焼状態の確認を行わない方がよい。",
+      "isCorrect": false,
+      "explanation": "確認しないのは危険である。",
       "imagePath": null
     },
     {
-      "question": "ボイラー内部のスケールを除去するために「酸洗浄」を行う場合、洗浄後は中和処理が必要である。",
+      "question": "燃焼状態の確認には、炎や排ガスを見ても意味がない。",
+      "isCorrect": false,
+      "explanation": "燃焼状態は外観にも現れる。",
+      "imagePath": null
+    },
+    {
+      "question": "異常音・異常振動・異臭を認めたときは、原因を確認し安全側で対処する。",
       "isCorrect": true,
-      "explanation": "正解！酸が残っていると逆に腐食を進めてしまいます。",
+      "explanation": "異常の早期発見と停止判断が重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "安全弁が作動して蒸気が噴き出した場合は、直ちに元弁（止め弁）を閉じて蒸気を止める。",
+      "isCorrect": false,
+      "explanation": "絶対ダメ！安全弁とボイラーの間には、いかなる弁も設けてはいけません（閉じると爆発します）。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの「濃縮」を防ぐために、底面吹き出し（ボトムブロー）を行う。",
+      "isCorrect": true,
+      "explanation": "正解！底部に溜まったスラッジ（泥状の不純物）や濃縮された水を排出します。",
+      "imagePath": null
+    },
+    {
+      "question": "圧力計の内部には、蒸気が直接入らないように「水」を溜めておく。",
+      "isCorrect": true,
+      "explanation": "正解！サイホン管などに水を溜め、高温蒸気による計器の故障を防ぎます。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの点火前には、水位や弁の確認をせず、すぐ燃焼を開始した方が安全である。",
+      "isCorrect": false,
+      "explanation": "確認不足は事故の原因になる。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー取扱者は、運転記録を残す必要はない。",
+      "isCorrect": false,
+      "explanation": "記録なしでは傾向が見えにくい。",
+      "imagePath": null
+    },
+    {
+      "question": "バックファイア（逆火）は、燃焼室内での着火遅れや、未燃ガスの充満などが原因で起こる。",
+      "isCorrect": true,
+      "explanation": "正解！「ボン！」という爆発音とともに火が吹き出す現象です。",
+      "imagePath": null
+    },
+    {
+      "question": "「プライミング」とは、ボイラー水の中に気泡が多く発生し、水面が泡立つ現象のことである。",
+      "isCorrect": false,
+      "explanation": "不正解！それは「フォーミング」です。プライミングは、沸騰が激しくなり水滴が蒸気に混じって飛び出すことです。",
+      "imagePath": null
+    },
+    {
+      "question": "スートブロー（煤吹き）を行うときは、燃焼を停止するか、低燃焼の状態で行う。",
+      "isCorrect": false,
+      "explanation": "逆です！火が消えないよう、負荷を少し高くして（燃焼を安定させて）から行います。",
+      "imagePath": null
+    },
+    {
+      "question": "ガラス水面計のコックが詰まった場合、ドレン弁を開いても水面が動かない。",
+      "isCorrect": true,
+      "explanation": "正解！詰まりを解消する「機能試験」が必要です。",
+      "imagePath": null
+    },
+    {
+      "question": "吹出しは、頻度や量を適切に管理し、必要以上に熱や水を捨てないようにする。",
+      "isCorrect": true,
+      "explanation": "適正吹出しが重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "異常時の対応は、どの事象でも必ず同じ操作でよい。",
+      "isCorrect": false,
+      "explanation": "一律対応では危険なことがある。",
+      "imagePath": null
+    },
+    {
+      "question": "「キャリオーバ」が発生すると、蒸気の純度が低下し、配管やバルブの腐食・摩耗の原因となる。",
+      "isCorrect": true,
+      "explanation": "正解！不純物が蒸気と一緒に運ばれてしまう現象です。過負荷運転などが原因です。",
+      "imagePath": null
+    },
+    {
+      "question": "低水位は、ボイラー事故の重大原因の一つである。",
+      "isCorrect": true,
+      "explanation": "低水位は焼損や破損を招く。",
+      "imagePath": null
+    },
+    {
+      "question": "プレパージは、着火前に炉内へ残った可燃性ガスを排出するために行う。",
+      "isCorrect": true,
+      "explanation": "爆発防止のための換気である。",
+      "imagePath": null
+    },
+    {
+      "question": "缶水処理薬品は、目的と使用量を理解して適切に用いる必要がある。",
+      "isCorrect": true,
+      "explanation": "過不足なく使うことが重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "「スカミング」とは、ボイラー水表面に浮遊した浮遊物を排出する操作のことである。",
+      "isCorrect": true,
+      "explanation": "正解！水面吹き出し（表面ブロー）によって行われます。",
+      "imagePath": null
+    },
+    {
+      "question": "プレパージは、給水中の不純物を排出するために行う。",
+      "isCorrect": false,
+      "explanation": "給水処理とは無関係である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの水位が急に変化したときは、見かけの変動か実際の変動かを見極める必要がある。",
+      "isCorrect": true,
+      "explanation": "負荷変動などで見かけ水位も変わる。",
+      "imagePath": null
+    },
+    {
+      "question": "ブローのあとでも水位は全く変わらないので確認不要である。",
+      "isCorrect": false,
+      "explanation": "確認不要ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー停止時には、燃焼停止、後処理、圧力低下の確認などを順序よく行う。",
+      "isCorrect": true,
+      "explanation": "停止にも手順がある。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー効率を上げるためには、空気比をできるだけ「1」に近づけるのがよい。",
+      "isCorrect": true,
+      "explanation": "正解！理論空気量（1.0）に近いほど無駄な空気が少なく、熱損失が減ります（実際は1.1〜1.3程度で運転します）。",
+      "imagePath": null
+    },
+    {
+      "question": "「冷態起動」とは、ボイラーが十分に冷えた状態から点火・昇圧することである。",
+      "isCorrect": true,
+      "explanation": "正解！急激な加熱を避け、熱応力を抑えるためゆっくり行います。",
+      "imagePath": null
+    },
+    {
+      "question": "水面計のコック類は、日常点検で作動確認を行うことがある。",
+      "isCorrect": true,
+      "explanation": "閉塞や不良確認のため点検する。",
+      "imagePath": null
+    },
+    {
+      "question": "乾燥保存法は、期間が比較的短い場合や、凍結の恐れがある場合に適している。",
+      "isCorrect": false,
+      "explanation": "不正解！乾燥保存は「長期間」向けです。凍結の恐れがある場合には適しています（水がないので凍らない）。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気弁を閉める際、力まかせに締め付けると弁体や弁座を傷める原因となる。",
+      "isCorrect": true,
+      "explanation": "正解！軽く当たったところから少し増し締めする程度が基本です。",
+      "imagePath": null
+    },
+    {
+      "question": "停缶中でも、必要に応じて腐食防止措置を考える。",
+      "isCorrect": true,
+      "explanation": "休止中の腐食対策も重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの点火前には、水位・圧力計・弁類の状態を確認することが重要である。",
+      "isCorrect": true,
+      "explanation": "点火前確認は基本である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーを起動するときは、一般に急激な昇圧を避け、徐々に温度・圧力を上げる。",
+      "isCorrect": true,
+      "explanation": "熱応力を避けるため徐々に立ち上げる。",
+      "imagePath": null
+    },
+    {
+      "question": "重油を予熱する際、温度が高すぎると「ベーパロック（気泡による閉塞）」を起こすことがある。",
+      "isCorrect": true,
+      "explanation": "正解！配管内で油が気化してしまう現象です。逆に低すぎると霧化不良になります。",
+      "imagePath": null
+    },
+    {
+      "question": "缶水処理薬品は、量を多く入れるほど常に安全である。",
+      "isCorrect": false,
+      "explanation": "多すぎても不具合を生む。",
+      "imagePath": null
+    },
+    {
+      "question": "スケール（水あか）が伝熱面に付着すると、熱伝導が悪くなり、ボイラー効率が低下するが、過熱事故の原因にはならない。",
+      "isCorrect": false,
+      "explanation": "不正解！熱が伝わらず金属壁の温度が上がりすぎ、膨出や破裂（過熱事故）の原因になります。",
+      "imagePath": null
+    },
+    {
+      "question": "燃料切換え時には、燃焼の安定や供給系統の状態に注意する。",
+      "isCorrect": true,
+      "explanation": "切換え時は不安定になりやすい。",
+      "imagePath": null
+    },
+    {
+      "question": "高水位になるほど、蒸気は常に乾いて設備障害は起こりにくい。",
+      "isCorrect": false,
+      "explanation": "乾き度が上がるとは限らない。",
+      "imagePath": null
+    },
+    {
+      "question": "水位計（水面計）の機能試験は、点火直後に行うのが最も適切である。",
+      "isCorrect": false,
+      "explanation": "不正解！点火前（圧力が上がる前）と、圧力が上がり始めた時の2回行うのが基本です。",
+      "imagePath": null
+    },
+    {
+      "question": "清缶剤（ボイラーコンパウンド）は、ボイラー水のpH調整や軟化のために投入される。",
+      "isCorrect": true,
+      "explanation": "正解！スケールの付着防止や腐食防止の役割があります。",
+      "imagePath": null
+    },
+    {
+      "question": "異常音や異臭があっても、定格運転中なら無視してよい。",
+      "isCorrect": false,
+      "explanation": "異常の放置は危険である。",
+      "imagePath": null
+    },
+    {
+      "question": "負荷変動が大きいときは、燃焼量・給水量・水位の変化を特に注意する。",
+      "isCorrect": true,
+      "explanation": "負荷変動時は不安定になりやすい。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーを起動するときは、できるだけ短時間で急激に昇圧するのが望ましい。",
+      "isCorrect": false,
+      "explanation": "急激な立ち上げは損傷要因になる。",
+      "imagePath": null
+    },
+    {
+      "question": "低水位は、むしろボイラーを安全に保つ状態である。",
+      "isCorrect": false,
+      "explanation": "安全な状態ではない。",
       "imagePath": null
     },
     {
@@ -591,9 +915,39 @@
       "imagePath": null
     },
     {
-      "question": "ボイラー室の換気が不十分だと、酸素不足により不完全燃焼が起こり、一酸化炭素中毒の危険がある。",
+      "question": "ボイラーの水位が急変したときは、原因を考えずそのまま運転する。",
+      "isCorrect": false,
+      "explanation": "原因確認なしの継続運転は危険である。",
+      "imagePath": null
+    },
+    {
+      "question": "高水位では、蒸気に水滴が混じりやすくなり設備障害の原因となることがある。",
       "isCorrect": true,
-      "explanation": "正解！燃焼には大量の空気（酸素）が必要です。",
+      "explanation": "高水位はキャリーオーバーにつながる。",
+      "imagePath": null
+    },
+    {
+      "question": "満水保存法では、ボイラー水のpHを酸性に保つ。",
+      "isCorrect": false,
+      "explanation": "不正解！腐食を防ぐため、アルカリ性（pH11〜12程度）に保ちます。",
+      "imagePath": null
+    },
+    {
+      "question": "給水温度が低すぎると、煙道の低温腐食の原因となる。",
+      "isCorrect": true,
+      "explanation": "正解！排ガス中の水分が結露して、硫黄分と混ざり硫酸になります。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼用空気が不足すると、不完全燃焼が起こりやすくなる。",
+      "isCorrect": true,
+      "explanation": "空気不足はCO発生の原因になる。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼状態の確認には、炎の状態や排ガスの色・計器指示が参考になる。",
+      "isCorrect": true,
+      "explanation": "視認と計器の両方が参考になる。",
       "imagePath": null
     },
     {
@@ -601,13 +955,295 @@
       "isCorrect": true,
       "explanation": "正解！ポンプの故障や性能低下を招きます。",
       "imagePath": null
+    },
+    {
+      "question": "ボイラーの水位が安全低水面以下に低下した（異常低水位）ときは、直ちに給水を行い、水位を回復させる。",
+      "isCorrect": false,
+      "explanation": "絶対ダメ！空だき状態で急に給水すると、ボイラーが破損・爆発する危険があります。まずは「燃焼を停止」します。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーを長期間使用しない場合の保存法として、「乾燥保存法」と「満水保存法」がある。",
+      "isCorrect": true,
+      "explanation": "正解！乾燥保存は水を抜いて乾燥剤を入れます。満水保存は水を満たして薬剤を入れます。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの運転終了時は、給水を行って水位を「常用水位」よりもやや高めにしておく。",
+      "isCorrect": true,
+      "explanation": "正解！冷却により水位が下がるためです。ただし、高水位にしすぎるとキャリオーバの原因となるため注意が必要です。",
+      "imagePath": null
+    },
+    {
+      "question": "異常時にすぐ停止すべきか負荷を落とすべきかは、事象の種類に応じて判断する。",
+      "isCorrect": true,
+      "explanation": "異常内容で対処は変わる。",
+      "imagePath": null
+    },
+    {
+      "question": "負荷変動が大きいときほど、水位や燃焼量の監視は不要になる。",
+      "isCorrect": false,
+      "explanation": "監視不要にはならない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー水中の「溶存酸素」は、点食（ピッティング）の原因となる。",
+      "isCorrect": true,
+      "explanation": "正解！酸素は鉄を錆びさせます。脱酸素剤などで除去します。",
+      "imagePath": null
+    },
+    {
+      "question": "脱気器において、給水を加熱するのは、酸素などの気体の溶解度を下げるためである。",
+      "isCorrect": true,
+      "explanation": "正解！水温が上がると気体は溶けにくくなる性質を利用しています。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼用空気が不足すると、完全燃焼が起こりやすくなる。",
+      "isCorrect": false,
+      "explanation": "完全燃焼には適量の空気が必要である。",
+      "imagePath": null
+    },
+    {
+      "question": "点火に失敗した場合は、直ちに再点火を行う。",
+      "isCorrect": false,
+      "explanation": "危険です！未燃ガスが残っている可能性があるため、必ず「換気（プレパージ）」をしてから再点火します。",
+      "imagePath": null
+    },
+    {
+      "question": "軟水装置で用いるイオン交換樹脂が劣化した場合は、食塩水で再生（リジェネレーション）を行う。",
+      "isCorrect": true,
+      "explanation": "正解！ナトリウムイオンを補充して能力を回復させます。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー水のpHが低い（酸性）と、腐食が発生しやすくなる。",
+      "isCorrect": true,
+      "explanation": "正解！一般的にボイラー水はpH11〜11.8程度のアルカリ性に調整します。",
+      "imagePath": null
+    },
+    {
+      "question": "ガラス水面計が破損したときは、まず水側のコックを閉め、次に蒸気側のコックを閉める。",
+      "isCorrect": true,
+      "explanation": "正解！水漏れの方が危険（熱湯が出る）なので、水側から止めます。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気使用先の弁操作は、ボイラー運転に影響しない。",
+      "isCorrect": false,
+      "explanation": "無関係ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー取扱者は、日誌や記録を残して異常傾向の把握に役立てる。",
+      "isCorrect": true,
+      "explanation": "記録は管理改善に有効である。",
+      "imagePath": null
+    },
+    {
+      "question": "「逆止弁」の動作が悪いと、給水停止時にボイラー内の水が給水管側へ逆流する恐れがある。",
+      "isCorrect": true,
+      "explanation": "正解！そのため給水弁と併用されます。",
+      "imagePath": null
+    },
+    {
+      "question": "停缶中は、腐食防止を考える必要は全くない。",
+      "isCorrect": false,
+      "explanation": "停止中でも腐食は進みうる。",
+      "imagePath": null
+    },
+    {
+      "question": "「全溶解固形物（TDS）」の濃度が高くなると、キャリオーバが発生しやすくなる。",
+      "isCorrect": true,
+      "explanation": "正解！不純物が多いと泡立ちやすくなるためです。",
+      "imagePath": null
+    },
+    {
+      "question": "水面計のコック類は、一度設置したら作動確認は不要である。",
+      "isCorrect": false,
+      "explanation": "常に正常とは限らない。",
+      "imagePath": null
+    },
+    {
+      "question": "水面計の水位が上下に動いていない場合、配管の詰まりやコックの閉止が疑われる。",
+      "isCorrect": true,
+      "explanation": "正解！正常なら、燃焼中の水面は細かく上下に動いています。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー点火直後に炎が安定しない場合は、すぐに燃料を増やすとよい。",
+      "isCorrect": false,
+      "explanation": "危険です！未燃ガスが溜まってバックファイアの原因になるため、まずは空気量や温度を確認します。",
+      "imagePath": null
+    },
+    {
+      "question": "連続運転中は、定期的な巡視で漏れ・温度・音・計器指示を確認する。",
+      "isCorrect": true,
+      "explanation": "自動運転でも巡視は重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー水位が見えにくいときは、水位確認を省略して運転を続ける。",
+      "isCorrect": false,
+      "explanation": "確認省略は危険である。",
+      "imagePath": null
+    },
+    {
+      "question": "吹出しは、多ければ多いほど常に望ましく、制限なく行うべきである。",
+      "isCorrect": false,
+      "explanation": "過大吹出しは損失になる。",
+      "imagePath": null
+    },
+    {
+      "question": "水管ボイラーの管壁温度が高くなりすぎると、クリープ変形や破裂の原因となる。",
+      "isCorrect": true,
+      "explanation": "正解！スケール付着や水不足が原因で起こります。",
+      "imagePath": null
+    },
+    {
+      "question": "安全弁の手動試験（吹き出し試験）は、作動圧力に近い、十分な圧力がある状態で行う。",
+      "isCorrect": true,
+      "explanation": "正解！圧力が低すぎると吹き止まらなくなることがあるため、作動圧力に近い状態で行います。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー停止時には、主蒸気弁だけ閉めれば他の確認は不要である。",
+      "isCorrect": false,
+      "explanation": "弁操作だけで十分ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "給水ポンプの不調は、水位に影響しない。",
+      "isCorrect": false,
+      "explanation": "水位に無関係ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気使用先の急な弁操作は、ボイラー側の圧力や水位変動に影響することがある。",
+      "isCorrect": true,
+      "explanation": "蒸気負荷の変動はボイラーへ返る。",
+      "imagePath": null
+    },
+    {
+      "question": "「腐食抑制剤（インヒビター）」は、金属表面に皮膜を作って腐食を防ぐ薬剤である。",
+      "isCorrect": true,
+      "explanation": "正解！皮膜によって水と金属が直接触れるのを防ぎます。",
+      "imagePath": null
+    },
+    {
+      "question": "脱気器は、給水中のマグネシウムやカルシウムを除去する装置である。",
+      "isCorrect": false,
+      "explanation": "不正解！脱気器は「酸素や二酸化炭素」などの気体を除去します。ミネラル分を除去するのは「軟水装置」です。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー内部のスケールを除去するために「酸洗浄」を行う場合、洗浄後は中和処理が必要である。",
+      "isCorrect": true,
+      "explanation": "正解！酸が残っていると逆に腐食を進めてしまいます。",
+      "imagePath": null
+    },
+    {
+      "question": "失火したときは、確認せず直ちに再点火した方が効率的である。",
+      "isCorrect": false,
+      "explanation": "即再点火は危険である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー運転中に安全弁から微量の漏れがある場合、ハンマーで叩いて直すとよい。",
+      "isCorrect": false,
+      "explanation": "絶対ダメ！弁を傷めるだけでなく、突然の噴出を招く恐れがあり非常に危険です。",
+      "imagePath": null
+    },
+    {
+      "question": "連続運転中は、自動運転なら巡視は全く不要である。",
+      "isCorrect": false,
+      "explanation": "無人でよいとは限らない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー運転中に停電が発生した場合は、主蒸気弁を全開にして圧力を下げる。",
+      "isCorrect": false,
+      "explanation": "不正解！まず燃料供給を停止し、圧力の上昇を監視しながら、状況に応じて蒸気弁を操作します。急激な圧力変動は避けます。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー室の換気が不十分だと、酸素不足により不完全燃焼が起こり、一酸化炭素中毒の危険がある。",
+      "isCorrect": true,
+      "explanation": "正解！燃焼には大量の空気（酸素）が必要です。",
+      "imagePath": null
+    },
+    {
+      "question": "水打ち試験（満水試験）は、ボイラーの新設時や大修理後に行われる漏洩確認試験である。",
+      "isCorrect": true,
+      "explanation": "正解！圧力試験の一種です。",
+      "imagePath": null
+    },
+    {
+      "question": "給水ポンプの不調は、水位異常に直結するおそれがある。",
+      "isCorrect": true,
+      "explanation": "給水不能は低水位につながる。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼量を急激に増減させると、キャリオーバの原因となる。",
+      "isCorrect": true,
+      "explanation": "正解！水面が安定せず、蒸気に水滴が混入しやすくなります。",
+      "imagePath": null
+    },
+    {
+      "question": "運転状態の判断は、どれか1つの計器だけ見れば十分である。",
+      "isCorrect": false,
+      "explanation": "単独判断では見落としが出やすい。",
+      "imagePath": null
+    },
+    {
+      "question": "ブローのあと水位が変化するため、給水とのバランスを見る必要がある。",
+      "isCorrect": true,
+      "explanation": "吹出しは水位に影響する。",
+      "imagePath": null
     }
   ],
   "part3": [
     {
-      "question": "重油の密度は、温度が上昇すると小さくなる。",
+      "question": "理論空気量（A0）とは、燃料を完全燃焼させるために理論上必要な最小限の空気量のことである。",
       "isCorrect": true,
-      "explanation": "正解！液体は温めると膨張して体積が増えるため、密度（重さ÷体積）は小さくなります。",
+      "explanation": "正解！実際にはこれより少し多めの空気（実際空気量）を送ります。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼室内で十分な滞留時間がないと、燃え切らずに排出されるおそれがある。",
+      "isCorrect": true,
+      "explanation": "反応時間の不足は不完全燃焼につながる。",
+      "imagePath": null
+    },
+    {
+      "question": "排ガス中の一酸化炭素増加は、不完全燃焼の目安になる。",
+      "isCorrect": true,
+      "explanation": "CO増加は空気不足などを示す。",
+      "imagePath": null
+    },
+    {
+      "question": "ガス燃料は液体燃料に比べて、空気との混合が容易であり、少ない空気比で完全燃焼させやすい。",
+      "isCorrect": true,
+      "explanation": "正解！気体同士なので混ざりやすいためです。",
+      "imagePath": null
+    },
+    {
+      "question": "Ｃ重油の予熱温度は、一般に80〜105℃程度が適当とされる。",
+      "isCorrect": true,
+      "explanation": "正解！加熱しすぎると「ベーパロック（気泡）」の原因となり、低すぎると霧化不良になります。",
+      "imagePath": null
+    },
+    {
+      "question": "燃料油の粘度が高すぎると、噴霧状態が悪化しやすい。",
+      "isCorrect": true,
+      "explanation": "霧化しにくくなり燃焼に悪影響を与える。",
+      "imagePath": null
+    },
+    {
+      "question": "発熱量が大きい燃料ほど、同質量あたり取り出せる熱エネルギーは大きい。",
+      "isCorrect": true,
+      "explanation": "発熱量は燃料選定の基本指標である。",
       "imagePath": null
     },
     {
@@ -617,27 +1253,39 @@
       "imagePath": null
     },
     {
+      "question": "重油の予熱温度が低すぎると、粘度が高くなりすぎて、バーナでの霧化が不十分になる。",
+      "isCorrect": true,
+      "explanation": "正解！燃焼不良（黒煙）の原因になります。",
+      "imagePath": null
+    },
+    {
       "question": "重油の「粘度」が高いと、噴霧（霧化）が悪くなり、すすが発生しやすくなる。",
       "isCorrect": true,
       "explanation": "正解！ドロドロだと綺麗に霧にならないため、Ｃ重油などは予熱してサラサラにする必要があります。",
       "imagePath": null
     },
     {
-      "question": "「高発熱量」とは、燃料の燃焼によって生成された水蒸気の潜熱（凝縮熱）を含んだ発熱量のことである。",
+      "question": "燃料中の水分が多いと、有効発熱量の低下につながることがある。",
       "isCorrect": true,
-      "explanation": "正解！水蒸気の潜熱を含まないものを「低発熱量（有効発熱量）」といいます。",
+      "explanation": "水分蒸発に熱を取られる。",
       "imagePath": null
     },
     {
-      "question": "燃料中の「硫黄（S）」分が多いと、低温腐食の原因となる。",
+      "question": "バーナの火炎色や長さは、燃焼状態把握の参考になる。",
       "isCorrect": true,
-      "explanation": "正解！燃焼ガス中の水分と反応して硫酸になり、煙道などの低温部を腐食させます。",
+      "explanation": "外観観察は現場判断の一助になる。",
       "imagePath": null
     },
     {
-      "question": "理論空気量（A0）とは、燃料を完全燃焼させるために理論上必要な最小限の空気量のことである。",
+      "question": "空気比が小さすぎると、常に完全燃焼になる。",
+      "isCorrect": false,
+      "explanation": "完全燃焼には適量の空気が必要である。",
+      "imagePath": null
+    },
+    {
+      "question": "空気中の窒素は、燃焼では主に反応せず排ガス成分の大部分を占める。",
       "isCorrect": true,
-      "explanation": "正解！実際にはこれより少し多めの空気（実際空気量）を送ります。",
+      "explanation": "窒素は主として希釈成分である。",
       "imagePath": null
     },
     {
@@ -647,27 +1295,33 @@
       "imagePath": null
     },
     {
-      "question": "ガンタイプバーナ（圧力噴霧式）は、油に高い圧力をかけてノズルから噴出させる方式である。",
-      "isCorrect": true,
-      "explanation": "正解！構造が単純で扱いやすいため、中・小容量のボイラーで広く使われています。",
-      "imagePath": null
-    },
-    {
-      "question": "回転式バーナ（ロータリーバーナ）は、高速回転するカップの遠心力を利用して油を微粒化する。",
-      "isCorrect": true,
-      "explanation": "正解！粘度の高い油でも噴霧でき、噴霧角度も大きいです。",
-      "imagePath": null
-    },
-    {
-      "question": "蒸気噴霧式バーナは、噴霧媒体として蒸気を使い、ターンダウン比（調整範囲）が狭いのが特徴である。",
+      "question": "重油を加熱する主目的は、酸素濃度を増やすためである。",
       "isCorrect": false,
-      "explanation": "不正解！蒸気噴霧式は流量調節範囲（ターンダウン比）が「広い」のが特徴です。大型ボイラーに使われます。",
+      "explanation": "酸素濃度を増やす効果はない。",
       "imagePath": null
     },
     {
-      "question": "ガスバーナは、油バーナに比べて煤（すす）の発生が少なく、制御もしやすい。",
+      "question": "霧化が良いほど、燃料と空気の接触面積が増え、燃焼しやすくなる。",
       "isCorrect": true,
-      "explanation": "正解！燃料を微粒化する必要がないため、燃焼状態が安定しており清潔です。",
+      "explanation": "微粒化は燃焼促進に有利である。",
+      "imagePath": null
+    },
+    {
+      "question": "石炭の「水分」が多いと、着火が悪くなり、火炉の温度も低下する。",
+      "isCorrect": true,
+      "explanation": "正解！水分の蒸発に熱が奪われるためです。",
+      "imagePath": null
+    },
+    {
+      "question": "「平衡通風」は、押込ファンと誘引ファンの両方を使い、炉内圧力を大気圧よりわずかに低く（負圧）保つ。",
+      "isCorrect": true,
+      "explanation": "正解！吹き出し防止のため、わずかに負圧にするのが一般的です。大型ボイラーで採用されます。",
+      "imagePath": null
+    },
+    {
+      "question": "バーナの火炎色や長さは、燃焼状態の把握に全く役立たない。",
+      "isCorrect": false,
+      "explanation": "まったく無意味ではない。",
       "imagePath": null
     },
     {
@@ -683,63 +1337,15 @@
       "imagePath": null
     },
     {
-      "question": "石炭などの固体燃料において、「揮発分」が多いほど着火しやすく、燃焼の継続も容易である。",
+      "question": "重油を適温に加熱するのは、粘度を下げて良好な噴霧を得るためである。",
       "isCorrect": true,
-      "explanation": "正解！揮発分がガスとなって燃えるため、炎を上げて燃えやすくなります。",
+      "explanation": "適温加熱で噴霧性が改善する。",
       "imagePath": null
     },
     {
-      "question": "通風装置における「押込通風」は、ファンで燃焼室内に空気を押し込み、炉内を正圧（プラス圧）にする方式である。",
-      "isCorrect": true,
-      "explanation": "正解！逆に吸い出すのを「誘引通風（炉内は負圧）」といいます。",
-      "imagePath": null
-    },
-    {
-      "question": "「平衡通風」は、押込ファンと誘引ファンの両方を使い、炉内圧力を大気圧よりわずかに低く（負圧）保つ。",
-      "isCorrect": true,
-      "explanation": "正解！吹き出し防止のため、わずかに負圧にするのが一般的です。大型ボイラーで採用されます。",
-      "imagePath": null
-    },
-    {
-      "question": "重油の添加剤において、「スラッジ分散剤」は、タンク底部の沈殿物を溶解・分散させる効果がある。",
-      "isCorrect": true,
-      "explanation": "正解！配管やストレーナの閉塞を防ぎます。",
-      "imagePath": null
-    },
-    {
-      "question": "「バナジウム」を含む重油を燃焼させると、伝熱面に「高温腐食」を引き起こすことがある。",
-      "isCorrect": true,
-      "explanation": "正解！バナジウムアタックと呼ばれます。灰の融点が下がり、伝熱面に付着して腐食させます。",
-      "imagePath": null
-    },
-    {
-      "question": "Ｃ重油の予熱温度は、一般に80〜105℃程度が適当とされる。",
-      "isCorrect": true,
-      "explanation": "正解！加熱しすぎると「ベーパロック（気泡）」の原因となり、低すぎると霧化不良になります。",
-      "imagePath": null
-    },
-    {
-      "question": "不完全燃焼が起こると、排ガス中の二酸化炭素（CO2）が増加し、一酸化炭素（CO）は減少する。",
+      "question": "火炎がバーナ先端から離れるほど、常に安定燃焼になる。",
       "isCorrect": false,
-      "explanation": "逆です！不完全燃焼だと、有毒な「一酸化炭素（CO）」が増加し、黒煙（すす）が発生します。",
-      "imagePath": null
-    },
-    {
-      "question": "都市ガスの主成分は、メタン（CH4）であり、天然ガスを原料として製造されている。",
-      "isCorrect": true,
-      "explanation": "正解！空気より軽く、漏れると天井付近に滞留します。",
-      "imagePath": null
-    },
-    {
-      "question": "LPG（液化石油ガス）は、空気より重いため、漏れると床面に滞留する。",
-      "isCorrect": true,
-      "explanation": "正解！プロパンやブタンが主成分です。くぼみなどに溜まりやすく爆発の危険があります。",
-      "imagePath": null
-    },
-    {
-      "question": "拡散燃焼方式のガスバーナは、ガスと空気を別々に噴出させて燃焼させるため、逆火しにくい。",
-      "isCorrect": true,
-      "explanation": "正解！安定性が高く、大型ボイラーの主流です。",
+      "explanation": "離れすぎは不安定要因である。",
       "imagePath": null
     },
     {
@@ -749,99 +1355,27 @@
       "imagePath": null
     },
     {
-      "question": "「クリンカ」とは、石炭の灰が溶融して固まった塊のことである。",
-      "isCorrect": true,
-      "explanation": "正解！通風を妨害したり、炉壁を傷めたりする厄介者です。",
-      "imagePath": null
-    },
-    {
-      "question": "重油加熱器（オイルヒーター）を長時間使用しない場合は、中に重油を残したままにしておく。",
-      "isCorrect": false,
-      "explanation": "不正解！重油が冷えて固まったり炭化したりするため、軽油などに置換するか、完全に抜くのが望ましいです。",
-      "imagePath": null
-    },
-    {
       "question": "ダンパは、煙道や風道の途中に設けられ、通風量（空気やガスの量）を調節する装置である。",
       "isCorrect": true,
       "explanation": "正解！空気量の調整は燃焼管理の基本です。",
       "imagePath": null
     },
     {
-      "question": "燃焼室（炉）の熱負荷が高いと、炉内温度が高くなりすぎ、炉壁の損傷を招くことがある。",
+      "question": "拡散燃焼方式のガスバーナは、ガスと空気を別々に噴出させて燃焼させるため、逆火しにくい。",
       "isCorrect": true,
-      "explanation": "正解！単位体積あたりの発熱量が大きすぎる状態です。",
+      "explanation": "正解！安定性が高く、大型ボイラーの主流です。",
       "imagePath": null
     },
     {
-      "question": "「着火点（発火点）」とは、火種を近づけたときに燃え始める最低温度のことである。",
+      "question": "実際の燃焼では、理論空気量より少ない空気を与えるのが普通である。",
       "isCorrect": false,
-      "explanation": "不正解！火種を近づけて燃えるのは「引火点」です。着火点（発火点）は、火種がなくても「自ら燃え出す」温度です。",
+      "explanation": "不足空気では不完全燃焼になりやすい。",
       "imagePath": null
     },
     {
-      "question": "排ガス熱回収装置（エコノマイザ等）の低温腐食を防ぐために、給水温度を下げて運転する。",
-      "isCorrect": false,
-      "explanation": "逆です！給水温度が低いと伝熱面が結露しやすくなるため、給水温度を「上げて」腐食を防ぎます。",
-      "imagePath": null
-    },
-    {
-      "question": "重油の「引火点」とは、火を近づけた時に瞬間的に燃え出す最低の温度である。",
+      "question": "LPG（液化石油ガス）は、空気より重いため、漏れると床面に滞留する。",
       "isCorrect": true,
-      "explanation": "正解！燃焼を継続する「燃焼点」や、自ら燃え出す「着火点」とは異なります。",
-      "imagePath": null
-    },
-    {
-      "question": "「低発熱量」は、高発熱量から水蒸気の凝縮熱（潜熱）を差し引いたものである。",
-      "isCorrect": true,
-      "explanation": "正解！ボイラーの熱損失計算には、主に低発熱量が使われます。",
-      "imagePath": null
-    },
-    {
-      "question": "重油の「流動点」とは、油が冷却されて流動性を失う直前の温度をいう。",
-      "isCorrect": true,
-      "explanation": "正解！寒冷地では、流動点を下回らないように加熱・保温が必要です。",
-      "imagePath": null
-    },
-    {
-      "question": "「完全燃焼」とは、燃料中の可燃成分（C, H, Sなど）がすべて酸化され、燃え残りのない状態をいう。",
-      "isCorrect": true,
-      "explanation": "正解！理想的な燃焼状態です。",
-      "imagePath": null
-    },
-    {
-      "question": "「煤（すす）」の主な成分は、燃え残った炭素（遊離炭素）である。",
-      "isCorrect": true,
-      "explanation": "正解！空気不足や低温燃焼が原因で発生します。",
-      "imagePath": null
-    },
-    {
-      "question": "「霧化（アトマイズ）」とは、液体燃料を微細な液滴にすることであり、表面積を増やして燃えやすくするために行う。",
-      "isCorrect": true,
-      "explanation": "正解！霧が細かいほどよく燃えます。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの「ドラフト（通風力）」は、煙突内外のガスの温度差やファンの力によって生じる。",
-      "isCorrect": true,
-      "explanation": "正解！排ガスを排出し、空気を吸い込むための力です。",
-      "imagePath": null
-    },
-    {
-      "question": "「空気比」が大きすぎると、余分な空気を温めるために熱損失が増え、ボイラー効率が下がる。",
-      "isCorrect": true,
-      "explanation": "正解！冷たい空気を必要以上に送ると、炉内温度も下がってしまいます。",
-      "imagePath": null
-    },
-    {
-      "question": "ガス燃料は液体燃料に比べて、空気との混合が容易であり、少ない空気比で完全燃焼させやすい。",
-      "isCorrect": true,
-      "explanation": "正解！気体同士なので混ざりやすいためです。",
-      "imagePath": null
-    },
-    {
-      "question": "重油中の「灰分」は、燃焼後に残り、伝熱面の汚れや摩耗の原因となる。",
-      "isCorrect": true,
-      "explanation": "正解！金属成分などが含まれています。",
+      "explanation": "正解！プロパンやブタンが主成分です。くぼみなどに溜まりやすく爆発の危険があります。",
       "imagePath": null
     },
     {
@@ -851,39 +1385,117 @@
       "imagePath": null
     },
     {
+      "question": "燃焼管理では、空気供給量は一切気にしなくてよい。",
+      "isCorrect": false,
+      "explanation": "空気量無視では良好燃焼にならない。",
+      "imagePath": null
+    },
+    {
+      "question": "「空気比」が大きすぎると、余分な空気を温めるために熱損失が増え、ボイラー効率が下がる。",
+      "isCorrect": true,
+      "explanation": "正解！冷たい空気を必要以上に送ると、炉内温度も下がってしまいます。",
+      "imagePath": null
+    },
+    {
+      "question": "重油加熱器（オイルヒーター）を長時間使用しない場合は、中に重油を残したままにしておく。",
+      "isCorrect": false,
+      "explanation": "不正解！重油が冷えて固まったり炭化したりするため、軽油などに置換するか、完全に抜くのが望ましいです。",
+      "imagePath": null
+    },
+    {
+      "question": "着火温度とは、水が沸騰し始める最低温度をいう。",
+      "isCorrect": false,
+      "explanation": "沸点とは別概念である。",
+      "imagePath": null
+    },
+    {
       "question": "「二段燃焼法」は、燃焼用空気を2回に分けて供給することで、NOx（窒素酸化物）の発生を抑える方法である。",
       "isCorrect": true,
       "explanation": "正解！燃焼ピーク温度を下げ、酸素濃度を抑える効果があります。",
       "imagePath": null
     },
     {
-      "question": "石炭の「水分」が多いと、着火が悪くなり、火炉の温度も低下する。",
-      "isCorrect": true,
-      "explanation": "正解！水分の蒸発に熱が奪われるためです。",
+      "question": "ガス燃料は、一般に液体燃料より霧化器を必ず必要とする。",
+      "isCorrect": false,
+      "explanation": "霧化器は液体燃料で問題になる。",
       "imagePath": null
     },
     {
-      "question": "プロパン（C3H8）は、LPガスの主要成分の一つであり、沸点が低く、常温で容易に液化できる。",
+      "question": "燃焼によって生じる二酸化炭素量は、燃料の炭素分と関係する。",
       "isCorrect": true,
-      "explanation": "正解！加圧すると液体になり、運びやすくなります。",
+      "explanation": "炭素が燃えればCO2が生じる。",
       "imagePath": null
     },
     {
-      "question": "「ばい煙」とは、燃料の燃焼に伴い発生する、いおう酸化物、窒素酸化物、ばいじんなどの総称である。",
+      "question": "ガス燃料は、一般に液体燃料より前処理が少なく取り扱いやすい面がある。",
       "isCorrect": true,
-      "explanation": "正解！環境規制（大気汚染防止法）の対象となります。",
+      "explanation": "ガスは配管供給しやすい。",
       "imagePath": null
     },
     {
-      "question": "バーナの「保炎器」は、気流を乱して炎を安定させ、吹き飛び（リフト）を防ぐために設けられる。",
+      "question": "理論空気量とは、燃料を完全燃焼させるのに必要な最小の空気量をいう。",
       "isCorrect": true,
-      "explanation": "正解！炎を一定の位置に固定する役割があります。",
+      "explanation": "理論空気量は燃焼計算の基礎である。",
       "imagePath": null
     },
     {
-      "question": "重油の予熱温度が低すぎると、粘度が高くなりすぎて、バーナでの霧化が不十分になる。",
+      "question": "不完全燃焼が起こると、排ガス中の二酸化炭素（CO2）が増加し、一酸化炭素（CO）は減少する。",
+      "isCorrect": false,
+      "explanation": "逆です！不完全燃焼だと、有毒な「一酸化炭素（CO）」が増加し、黒煙（すす）が発生します。",
+      "imagePath": null
+    },
+    {
+      "question": "重油の「流動点」とは、油が冷却されて流動性を失う直前の温度をいう。",
       "isCorrect": true,
-      "explanation": "正解！燃焼不良（黒煙）の原因になります。",
+      "explanation": "正解！寒冷地では、流動点を下回らないように加熱・保温が必要です。",
+      "imagePath": null
+    },
+    {
+      "question": "「低発熱量」は、高発熱量から水蒸気の凝縮熱（潜熱）を差し引いたものである。",
+      "isCorrect": true,
+      "explanation": "正解！ボイラーの熱損失計算には、主に低発熱量が使われます。",
+      "imagePath": null
+    },
+    {
+      "question": "硫黄分を多く含む燃料では、燃焼後に硫黄酸化物が発生しやすい。",
+      "isCorrect": true,
+      "explanation": "環境負荷や腐食の要因になる。",
+      "imagePath": null
+    },
+    {
+      "question": "蒸気噴霧式バーナは、噴霧媒体として蒸気を使い、ターンダウン比（調整範囲）が狭いのが特徴である。",
+      "isCorrect": false,
+      "explanation": "不正解！蒸気噴霧式は流量調節範囲（ターンダウン比）が「広い」のが特徴です。大型ボイラーに使われます。",
+      "imagePath": null
+    },
+    {
+      "question": "「高発熱量」とは、燃料の燃焼によって生成された水蒸気の潜熱（凝縮熱）を含んだ発熱量のことである。",
+      "isCorrect": true,
+      "explanation": "正解！水蒸気の潜熱を含まないものを「低発熱量（有効発熱量）」といいます。",
+      "imagePath": null
+    },
+    {
+      "question": "通風装置における「押込通風」は、ファンで燃焼室内に空気を押し込み、炉内を正圧（プラス圧）にする方式である。",
+      "isCorrect": true,
+      "explanation": "正解！逆に吸い出すのを「誘引通風（炉内は負圧）」といいます。",
+      "imagePath": null
+    },
+    {
+      "question": "煤の発生は、空気量や混合状態とは無関係である。",
+      "isCorrect": false,
+      "explanation": "空気量や混合は大きく関係する。",
+      "imagePath": null
+    },
+    {
+      "question": "引火点は、液体燃料から発生する蒸気に点火したとき一時的に炎が出る最低温度をいう。",
+      "isCorrect": true,
+      "explanation": "液体燃料の危険性評価に使う。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの「ドラフト（通風力）」は、煙突内外のガスの温度差やファンの力によって生じる。",
+      "isCorrect": true,
+      "explanation": "正解！排ガスを排出し、空気を吸い込むための力です。",
       "imagePath": null
     },
     {
@@ -893,9 +1505,207 @@
       "imagePath": null
     },
     {
-      "question": "燃料中の「水素（H）」は、燃焼すると水（H2O）になり、大きな熱量を発生する。",
+      "question": "燃焼によって生じる二酸化炭素量は、燃料の炭素分とは無関係である。",
+      "isCorrect": false,
+      "explanation": "無関係ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "排ガス中の一酸化炭素増加は、完全燃焼が進んだ目安になる。",
+      "isCorrect": false,
+      "explanation": "完全燃焼の目安ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "排ガス温度が過度に高いほど、必ず熱効率は最良である。",
+      "isCorrect": false,
+      "explanation": "高温排ガスは効率面で不利なことがある。",
+      "imagePath": null
+    },
+    {
+      "question": "回転式バーナ（ロータリーバーナ）は、高速回転するカップの遠心力を利用して油を微粒化する。",
       "isCorrect": true,
-      "explanation": "正解！炭素と同様、重要な燃料成分です。",
+      "explanation": "正解！粘度の高い油でも噴霧でき、噴霧角度も大きいです。",
+      "imagePath": null
+    },
+    {
+      "question": "燃料中の「硫黄（S）」分が多いと、低温腐食の原因となる。",
+      "isCorrect": true,
+      "explanation": "正解！燃焼ガス中の水分と反応して硫酸になり、煙道などの低温部を腐食させます。",
+      "imagePath": null
+    },
+    {
+      "question": "ガスバーナは、油バーナに比べて煤（すす）の発生が少なく、制御もしやすい。",
+      "isCorrect": true,
+      "explanation": "正解！燃料を微粒化する必要がないため、燃焼状態が安定しており清潔です。",
+      "imagePath": null
+    },
+    {
+      "question": "排ガス温度が過度に高いと、熱回収不足や伝熱面汚れが疑われることがある。",
+      "isCorrect": true,
+      "explanation": "排ガス損失増大の可能性がある。",
+      "imagePath": null
+    },
+    {
+      "question": "完全燃焼には、酸素がなくても点火源だけあれば十分である。",
+      "isCorrect": false,
+      "explanation": "酸素なしでは燃焼しない。",
+      "imagePath": null
+    },
+    {
+      "question": "理論空気量とは、燃焼室を冷却するためだけに送る空気量をいう。",
+      "isCorrect": false,
+      "explanation": "冷却専用の意味ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "着火温度とは、可燃物が自ら燃え始めるのに必要な最低温度である。",
+      "isCorrect": true,
+      "explanation": "燃焼開始に関する温度である。",
+      "imagePath": null
+    },
+    {
+      "question": "石炭などの固体燃料において、「揮発分」が多いほど着火しやすく、燃焼の継続も容易である。",
+      "isCorrect": true,
+      "explanation": "正解！揮発分がガスとなって燃えるため、炎を上げて燃えやすくなります。",
+      "imagePath": null
+    },
+    {
+      "question": "火炎がバーナ先端から離れすぎると、燃焼不良や失火の原因になることがある。",
+      "isCorrect": true,
+      "explanation": "火炎保持は重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "バーナの「保炎器」は、気流を乱して炎を安定させ、吹き飛び（リフト）を防ぐために設けられる。",
+      "isCorrect": true,
+      "explanation": "正解！炎を一定の位置に固定する役割があります。",
+      "imagePath": null
+    },
+    {
+      "question": "「ばい煙」とは、燃料の燃焼に伴い発生する、いおう酸化物、窒素酸化物、ばいじんなどの総称である。",
+      "isCorrect": true,
+      "explanation": "正解！環境規制（大気汚染防止法）の対象となります。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼用空気温度が高いと、一般に着火や燃焼の安定に有利なことがある。",
+      "isCorrect": true,
+      "explanation": "適切な予熱は燃焼を助ける。",
+      "imagePath": null
+    },
+    {
+      "question": "引火点は、金属が溶け始める最低温度をいう。",
+      "isCorrect": false,
+      "explanation": "金属の融点とは別である。",
+      "imagePath": null
+    },
+    {
+      "question": "重油の「引火点」とは、火を近づけた時に瞬間的に燃え出す最低の温度である。",
+      "isCorrect": true,
+      "explanation": "正解！燃焼を継続する「燃焼点」や、自ら燃え出す「着火点」とは異なります。",
+      "imagePath": null
+    },
+    {
+      "question": "霧化が良いほど、燃料と空気の接触面積が減り、燃焼しにくくなる。",
+      "isCorrect": false,
+      "explanation": "接触面積は増える。",
+      "imagePath": null
+    },
+    {
+      "question": "「霧化（アトマイズ）」とは、液体燃料を微細な液滴にすることであり、表面積を増やして燃えやすくするために行う。",
+      "isCorrect": true,
+      "explanation": "正解！霧が細かいほどよく燃えます。",
+      "imagePath": null
+    },
+    {
+      "question": "「クリンカ」とは、石炭の灰が溶融して固まった塊のことである。",
+      "isCorrect": true,
+      "explanation": "正解！通風を妨害したり、炉壁を傷めたりする厄介者です。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼管理では、燃料供給量だけでなく空気供給量の調整も重要である。",
+      "isCorrect": true,
+      "explanation": "空燃比管理が重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼室内の滞留時間が短いほど、常に完全燃焼になる。",
+      "isCorrect": false,
+      "explanation": "短すぎる滞留時間は不利である。",
+      "imagePath": null
+    },
+    {
+      "question": "完全燃焼には、燃料・酸素・点火源・適切な混合と滞留時間が必要である。",
+      "isCorrect": true,
+      "explanation": "燃焼には基本条件がそろう必要がある。",
+      "imagePath": null
+    },
+    {
+      "question": "燃料中の水分が多いほど、有効発熱量は必ず増加する。",
+      "isCorrect": false,
+      "explanation": "増加ではなく低下要因である。",
+      "imagePath": null
+    },
+    {
+      "question": "排ガス熱回収装置（エコノマイザ等）の低温腐食を防ぐために、給水温度を下げて運転する。",
+      "isCorrect": false,
+      "explanation": "逆です！給水温度が低いと伝熱面が結露しやすくなるため、給水温度を「上げて」腐食を防ぎます。",
+      "imagePath": null
+    },
+    {
+      "question": "空気中の窒素は、燃焼で必ずすべて酸素に変わる。",
+      "isCorrect": false,
+      "explanation": "酸素に変化するわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "都市ガスの主成分は、メタン（CH4）であり、天然ガスを原料として製造されている。",
+      "isCorrect": true,
+      "explanation": "正解！空気より軽く、漏れると天井付近に滞留します。",
+      "imagePath": null
+    },
+    {
+      "question": "「完全燃焼」とは、燃料中の可燃成分（C, H, Sなど）がすべて酸化され、燃え残りのない状態をいう。",
+      "isCorrect": true,
+      "explanation": "正解！理想的な燃焼状態です。",
+      "imagePath": null
+    },
+    {
+      "question": "重油の密度は、温度が上昇すると小さくなる。",
+      "isCorrect": true,
+      "explanation": "正解！液体は温めると膨張して体積が増えるため、密度（重さ÷体積）は小さくなります。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼の安定には、適切な点火位置やバーナ整備状態も影響する。",
+      "isCorrect": true,
+      "explanation": "機器状態も安定燃焼の重要因子である。",
+      "imagePath": null
+    },
+    {
+      "question": "重油中の「灰分」は、燃焼後に残り、伝熱面の汚れや摩耗の原因となる。",
+      "isCorrect": true,
+      "explanation": "正解！金属成分などが含まれています。",
+      "imagePath": null
+    },
+    {
+      "question": "発熱量が大きい燃料ほど、同質量あたり取り出せる熱エネルギーは小さい。",
+      "isCorrect": false,
+      "explanation": "大小関係が逆である。",
+      "imagePath": null
+    },
+    {
+      "question": "重油の添加剤において、「スラッジ分散剤」は、タンク底部の沈殿物を溶解・分散させる効果がある。",
+      "isCorrect": true,
+      "explanation": "正解！配管やストレーナの閉塞を防ぎます。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼の安定は、点火位置やバーナ整備状態に影響されない。",
+      "isCorrect": false,
+      "explanation": "まったく無関係ではない。",
       "imagePath": null
     },
     {
@@ -903,177 +1713,99 @@
       "isCorrect": true,
       "explanation": "正解！ガス流速が速すぎると起こり、失火の危険があります。",
       "imagePath": null
+    },
+    {
+      "question": "燃焼用空気温度が高いと、一般に必ず燃焼は不安定になる。",
+      "isCorrect": false,
+      "explanation": "必ず不安定になるわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "硫黄分を多く含む燃料でも、硫黄酸化物は全く発生しない。",
+      "isCorrect": false,
+      "explanation": "硫黄分があればSOx発生要因となる。",
+      "imagePath": null
+    },
+    {
+      "question": "燃焼室（炉）の熱負荷が高いと、炉内温度が高くなりすぎ、炉壁の損傷を招くことがある。",
+      "isCorrect": true,
+      "explanation": "正解！単位体積あたりの発熱量が大きすぎる状態です。",
+      "imagePath": null
+    },
+    {
+      "question": "燃料油の粘度が高すぎると、噴霧状態は必ず良くなる。",
+      "isCorrect": false,
+      "explanation": "高粘度が有利とは限らない。",
+      "imagePath": null
+    },
+    {
+      "question": "空気漏れが多いと、不要な排ガス量増加や熱損失の原因になる。",
+      "isCorrect": true,
+      "explanation": "余分な空気は損失を増やす。",
+      "imagePath": null
+    },
+    {
+      "question": "空気漏れが多いほど、常に燃焼効率は向上する。",
+      "isCorrect": false,
+      "explanation": "漏れが多いのは不利である。",
+      "imagePath": null
+    },
+    {
+      "question": "煤の発生は、燃料性状や空気不足、混合不良などに関係する。",
+      "isCorrect": true,
+      "explanation": "すすは不完全燃焼の代表的兆候である。",
+      "imagePath": null
+    },
+    {
+      "question": "燃料中の「水素（H）」は、燃焼すると水（H2O）になり、大きな熱量を発生する。",
+      "isCorrect": true,
+      "explanation": "正解！炭素と同様、重要な燃料成分です。",
+      "imagePath": null
+    },
+    {
+      "question": "「着火点（発火点）」とは、火種を近づけたときに燃え始める最低温度のことである。",
+      "isCorrect": false,
+      "explanation": "不正解！火種を近づけて燃えるのは「引火点」です。着火点（発火点）は、火種がなくても「自ら燃え出す」温度です。",
+      "imagePath": null
+    },
+    {
+      "question": "「バナジウム」を含む重油を燃焼させると、伝熱面に「高温腐食」を引き起こすことがある。",
+      "isCorrect": true,
+      "explanation": "正解！バナジウムアタックと呼ばれます。灰の融点が下がり、伝熱面に付着して腐食させます。",
+      "imagePath": null
+    },
+    {
+      "question": "プロパン（C3H8）は、LPガスの主要成分の一つであり、沸点が低く、常温で容易に液化できる。",
+      "isCorrect": true,
+      "explanation": "正解！加圧すると液体になり、運びやすくなります。",
+      "imagePath": null
+    },
+    {
+      "question": "空気比が小さすぎると、不完全燃焼が起こりやすい。",
+      "isCorrect": true,
+      "explanation": "空気不足はCOやばい煙の原因になる。",
+      "imagePath": null
+    },
+    {
+      "question": "「煤（すす）」の主な成分は、燃え残った炭素（遊離炭素）である。",
+      "isCorrect": true,
+      "explanation": "正解！空気不足や低温燃焼が原因で発生します。",
+      "imagePath": null
+    },
+    {
+      "question": "ガンタイプバーナ（圧力噴霧式）は、油に高い圧力をかけてノズルから噴出させる方式である。",
+      "isCorrect": true,
+      "explanation": "正解！構造が単純で扱いやすいため、中・小容量のボイラーで広く使われています。",
+      "imagePath": null
+    },
+    {
+      "question": "実際の燃焼では、一般に理論空気量より多めの空気を与える。",
+      "isCorrect": true,
+      "explanation": "混合むらを考慮し余剰空気が必要である。",
+      "imagePath": null
     }
   ],
   "part4": [
-    {
-      "question": "2級ボイラー技士は、すべての種類のボイラーの「取扱作業主任者」になることができる。",
-      "isCorrect": false,
-      "explanation": "不正解！2級ボイラー技士が主任者になれるのは、規模など一定の条件を満たすボイラーに限られます。制限なく選任できるのは特級のみです。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー検査証の有効期間は、原則として「1年」である。",
-      "isCorrect": true,
-      "explanation": "正解！車検のようなもので、毎年更新検査（性能検査）を受ける必要があります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーを設置しようとする者は、工事開始の30日前までに、所轄労働基準監督署長に「ボイラー設置届」を提出しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！計画段階で届け出る必要があります（小型ボイラーなどを除く）。",
-      "imagePath": null
-    },
-    {
-      "question": "使用中のボイラーの伝熱面積を変更する場合、変更届のみでよく、変更検査を受ける必要はない。",
-      "isCorrect": false,
-      "explanation": "不正解！構造が変わるような変更工事を行う場合は、「変更検査」を受けなければなりません。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー取扱作業主任者は、1日に1回以上、水位測定装置の機能を点検しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！主任者の職務として法律で定められています。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー室には、ボイラー検査証を見やすい場所に掲示しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！ボイラー検査証は、使用中のボイラーに必ず掲示する必要があります。",
-      "imagePath": null
-    },
-    {
-      "question": "性能検査（更新検査）を受ける際、ボイラーの冷却や清掃などの準備は、検査員（労働基準監督署など）が行ってくれる。",
-      "isCorrect": false,
-      "explanation": "不正解！受検者（事業者側）が事前に冷却・掃除・その他必要な準備をしておく義務があります。",
-      "imagePath": null
-    },
-    {
-      "question": "移動式ボイラーを設置する場合は、所轄労働基準監督署長に設置の報告を行う必要がある。",
-      "isCorrect": true,
-      "explanation": "正解！移動式ボイラーは固定設置ではないため、設置許可や設置届ではなく「設置報告」となります。",
-      "imagePath": null
-    },
-    {
-      "question": "伝熱面積が3㎡以下の蒸気ボイラーは、「小型ボイラー」に分類され、ボイラー技士免許がなくても取り扱うことができる。",
-      "isCorrect": true,
-      "explanation": "正解！小型ボイラーは、特別教育を受けた者であれば取り扱えます。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー室には、必要に応じて「２つ以上」の出入口を設けなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！事故時に逃げ遅れないよう、避難経路を確保する必要があります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー技士免許が取り消された場合でも、すぐに再試験を受ければ免許を取得できる。",
-      "isCorrect": false,
-      "explanation": "不正解！免許を取り消された場合、原則として「1年間」は新たに免許を受けることができません。",
-      "imagePath": null
-    },
-    {
-      "question": "事業者は、ボイラーに事故が発生したときは、遅滞なく所轄労働基準監督署長に報告しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！爆発や破裂などの事故は、速やかに報告義務があります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの使用を休止した場合、検査証の有効期間内であっても、その効力は失われる。",
-      "isCorrect": false,
-      "explanation": "不正解！休止報告を出して休止しても、有効期間（1年）が残っていれば検査証は有効です。ただし、再開時には使用再開検査が必要な場合があります。",
-      "imagePath": null
-    },
-    {
-      "question": "「使用再開検査」は、使用を休止したボイラーを再び使用しようとする際、休止期間が1年以上となった場合などに必要となる。",
-      "isCorrect": true,
-      "explanation": "正解！長期間休止したボイラーは、安全確認のため検査を受ける必要があります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの「変更届」が必要な改造として、「エコノマイザ（節炭器）の取り付け」が含まれる。",
-      "isCorrect": true,
-      "explanation": "正解！付属設備の変更も、ボイラーの性能に関わるため届出が必要です。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー取扱作業主任者を選任すべき事由が発生した日から、遅くとも「14日以内」に選任しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！選任したら、その旨を労働基準監督署長に報告する必要もあります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー室において、ボイラーの最上部から天井までの距離は、原則として「1.2m以上」必要である。",
-      "isCorrect": true,
-      "explanation": "正解！安全弁の検査や配管作業を行うためのスペースです。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの「使用検査」は、外国から輸入したボイラー等を使用しようとする時に受ける検査である。",
-      "isCorrect": true,
-      "explanation": "正解！構造検定を受けていない（日本の基準で作られていない）ボイラーを使うための検査です。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー技士は、住所を変更したときは、免許証の書換え（書き換え）申請をしなければならない。",
-      "isCorrect": false,
-      "explanation": "不正解！住所変更だけなら書換えは不要です。氏名（名前）が変わった時は書換えが必要です。",
-      "imagePath": null
-    },
-    {
-      "question": "2級ボイラー技士試験の受験資格には、実務経験が必要である。",
-      "isCorrect": false,
-      "explanation": "不正解！試験自体は「誰でも」受けられます。ただし、合格後に免許を申請する際に、実務経験や実技講習の修了が必要になります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの定期自主検査は、「1か月を超えない期間ごと」に行わなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！性能検査（1年ごと）とは別に、事業者が毎月行う点検義務です。",
-      "imagePath": null
-    },
-    {
-      "question": "定期自主検査の記録は、「3年間」保存しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！いつ点検したか証拠を残しておく必要があります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー（小型を除く）の設置場所は、「専用の建物」または「建物内の障壁で区画された場所」でなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！いわゆる「ボイラー室」です。障壁は不燃材料で作る必要があります。",
-      "imagePath": null
-    },
-    {
-      "question": "鋳鉄製ボイラーの使用期間（寿命）に関する法的規制はない。",
-      "isCorrect": true,
-      "explanation": "正解！適切に管理されていれば何年でも使えます。ただし、圧力や温度の制限は厳しいです。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの「燃焼室」などの内部に入って掃除や修理を行うときは、ボイラーを十分に冷却し、かつ「換気」を行わなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！酸欠事故や一酸化炭素中毒を防ぐため、非常に重要です。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー検査証を紛失した場合、免許証と同様に「再交付」を申請することができる。",
-      "isCorrect": true,
-      "explanation": "正解！汚損したり失くした場合は、発行元の労働基準監督署長に申請します。",
-      "imagePath": null
-    },
-    {
-      "question": "所轄労働基準監督署長は、ボイラーの事故が発生し、危害が生ずるおそれがあると認めるときは、使用停止を命ずることができる。",
-      "isCorrect": true,
-      "explanation": "正解！行政には強い権限があり、危険と判断されれば止められます。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー技士が、ボイラー取扱作業中に重大な過失により事故を起こした場合、免許の取消し（取り消し）処分を受けることがある。",
-      "isCorrect": true,
-      "explanation": "正解！重大な過失による事故は、免許取消しの対象となります。",
-      "imagePath": null
-    },
     {
       "question": "「胴の内径が750mm以下」かつ「長さが1300mm以下」の蒸気ボイラーは、小型ボイラーに該当する。",
       "isCorrect": false,
@@ -1081,81 +1813,9 @@
       "imagePath": null
     },
     {
-      "question": "伝熱面積の算定において、貫流ボイラーは、燃焼ガス等に触れる管の面積の「10分の1」を伝熱面積とみなす。",
+      "question": "ボイラーの変更や補修では、内容によって法令上の確認が必要となることがある。",
       "isCorrect": true,
-      "explanation": "正解！貫流ボイラーは管だらけなので、そのまま計算すると巨大になりすぎるため、特例で1/10計算します。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーを廃止したときは、遅滞なくボイラー検査証を所轄労働基準監督署長に返還しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！使わなくなったボイラーの証書は返す義務があります。",
-      "imagePath": null
-    },
-    {
-      "question": "1級ボイラー技士は、すべてのボイラーにおいて「取扱作業主任者」になることができる。",
-      "isCorrect": false,
-      "explanation": "不正解！1級でも、大規模なボイラーの主任者にはなれない場合があります（特級が必要）。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー取扱作業主任者は、ボイラーの燃焼状態を監視し、異常がないか常に把握しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！安全運転を監督するのが主任者の役割です。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの「構造規格」に適合していないものは、原則として製造、輸入、設置が禁止されている。",
-      "isCorrect": true,
-      "explanation": "正解！日本の法令で定められた安全基準を守る必要があります。",
-      "imagePath": null
-    },
-    {
-      "question": "「小型ボイラー」を設置した場合は、所轄労働基準監督署長への設置届は不要である。",
-      "isCorrect": true,
-      "explanation": "正解！小型ボイラーは設置届などの規制が緩和されています。",
-      "imagePath": null
-    },
-    {
-      "question": "性能検査（更新検査）の有効期間は、検査に合格すれば、最長で「3年」まで延長できる場合がある。",
-      "isCorrect": false,
-      "explanation": "不正解！原則1年であり、認定ボイラー等の特例でも通常は2年までです（※一般的には1年）。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー室に、重油などの燃料を貯蔵する場合は、ボイラーから一定の距離を離す必要がある。",
-      "isCorrect": true,
-      "explanation": "正解！火災予防のため、条例などで距離が定められています（2m以上など）。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー技士免許は、本人が死亡したときは、遺族が遅滞なく返還しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！免許の効力は本人のみに帰属します。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの点検や掃除のために内部に入る際、他のボイラーとつながる蒸気管などの弁を確実に閉め、施錠などを行う必要がある。",
-      "isCorrect": true,
-      "explanation": "正解！他から蒸気が流れ込んでくると命に関わる事故になります。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの最高使用圧力を超えて使用することは、いかなる理由があっても禁止されている。",
-      "isCorrect": true,
-      "explanation": "正解！強度の限界を超えて使うのは非常に危険です。",
-      "imagePath": null
-    },
-    {
-      "question": "「簡易ボイラー」は、ボイラー及び圧力容器安全規則の適用をほとんど受けない、極めて小規模なものである。",
-      "isCorrect": true,
-      "explanation": "正解！非常に小規模なものが該当します。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー取扱作業主任者は、ボイラーの異常を認めた場合、速やかに必要な措置を講じなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！主任者の判断と指揮が重要です。",
+      "explanation": "重要変更は安全に直結する。",
       "imagePath": null
     },
     {
@@ -1165,33 +1825,9 @@
       "imagePath": null
     },
     {
-      "question": "ボイラーの伝熱面積の計算では、耐火れんがで覆われた部分は面積に算入しない。",
+      "question": "移動式ボイラーを設置する場合は、所轄労働基準監督署長に設置の報告を行う必要がある。",
       "isCorrect": true,
-      "explanation": "正解！直接熱が伝わらない部分は除外します。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラー技士の欠格事由には、18歳未満の者や、心身の障害により業務を適正に行えない者が含まれる。",
-      "isCorrect": true,
-      "explanation": "正解！安全に関わる業務のため、一定の制限があります。",
-      "imagePath": null
-    },
-    {
-      "question": "「ボイラー変更検査」を受けた場合、新しいボイラー検査証が交付されるか、または裏書きされる。",
-      "isCorrect": true,
-      "explanation": "正解！検査の結果が証明書に反映されます。",
-      "imagePath": null
-    },
-    {
-      "question": "ボイラーの周囲には、操作や検査のために、有効な空間（ボイラー据付スペース）を確保しなければならない。",
-      "isCorrect": true,
-      "explanation": "正解！壁にぴったりくっつけて設置してはいけません。",
-      "imagePath": null
-    },
-    {
-      "question": "「溶接検査」は、ボイラーの製造工程において、溶接部分の強度を確認するために行われる検査である。",
-      "isCorrect": true,
-      "explanation": "正解！主要な溶接箇所は厳しく検査されます。",
+      "explanation": "正解！移動式ボイラーは固定設置ではないため、設置許可や設置届ではなく「設置報告」となります。",
       "imagePath": null
     },
     {
@@ -1201,9 +1837,573 @@
       "imagePath": null
     },
     {
+      "question": "落成検査は、対象設備を使用開始する前の確認に関係する。",
+      "isCorrect": true,
+      "explanation": "使用前確認に位置づく。",
+      "imagePath": null
+    },
+    {
+      "question": "2級ボイラー技士試験の受験資格には、実務経験が必要である。",
+      "isCorrect": false,
+      "explanation": "不正解！試験自体は「誰でも」受けられます。ただし、合格後に免許を申請する際に、実務経験や実技講習の修了が必要になります。",
+      "imagePath": null
+    },
+    {
+      "question": "「簡易ボイラー」は、ボイラー及び圧力容器安全規則の適用をほとんど受けない、極めて小規模なものである。",
+      "isCorrect": true,
+      "explanation": "正解！非常に小規模なものが該当します。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの「構造規格」に適合していないものは、原則として製造、輸入、設置が禁止されている。",
+      "isCorrect": true,
+      "explanation": "正解！日本の法令で定められた安全基準を守る必要があります。",
+      "imagePath": null
+    },
+    {
+      "question": "作業主任者の役割には、作業方法の監視や安全確保が含まれる。",
+      "isCorrect": true,
+      "explanation": "安全管理が主任者の本旨である。",
+      "imagePath": null
+    },
+    {
+      "question": "定期自主検査の記録は、「3年間」保存しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！いつ点検したか証拠を残しておく必要があります。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー検査証の有効期間は、原則として「1年」である。",
+      "isCorrect": true,
+      "explanation": "正解！車検のようなもので、毎年更新検査（性能検査）を受ける必要があります。",
+      "imagePath": null
+    },
+    {
+      "question": "作業主任者に選任された者は、危険防止を考える必要はない。",
+      "isCorrect": false,
+      "explanation": "安全配慮が必要である。",
+      "imagePath": null
+    },
+    {
+      "question": "関係法令は試験にだけ必要で、実務では不要である。",
+      "isCorrect": false,
+      "explanation": "実務でも重要である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー検査証を紛失した場合、免許証と同様に「再交付」を申請することができる。",
+      "isCorrect": true,
+      "explanation": "正解！汚損したり失くした場合は、発行元の労働基準監督署長に申請します。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー（小型を除く）の設置場所は、「専用の建物」または「建物内の障壁で区画された場所」でなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！いわゆる「ボイラー室」です。障壁は不燃材料で作る必要があります。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー取扱者は、どの設備でも資格不要である。",
+      "isCorrect": false,
+      "explanation": "常に不要ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "法令上の用語や区分を理解しても、実務判断には役立たない。",
+      "isCorrect": false,
+      "explanation": "役立たないわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー取扱作業主任者は、ボイラーの異常を認めた場合、速やかに必要な措置を講じなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！主任者の判断と指揮が重要です。",
+      "imagePath": null
+    },
+    {
+      "question": "性能検査（更新検査）の有効期間は、検査に合格すれば、最長で「3年」まで延長できる場合がある。",
+      "isCorrect": false,
+      "explanation": "不正解！原則1年であり、認定ボイラー等の特例でも通常は2年までです（※一般的には1年）。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの周囲には、操作や検査のために、有効な空間（ボイラー据付スペース）を確保しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！壁にぴったりくっつけて設置してはいけません。",
+      "imagePath": null
+    },
+    {
+      "question": "2級ボイラー技士は、すべての種類のボイラーの「取扱作業主任者」になることができる。",
+      "isCorrect": false,
+      "explanation": "不正解！2級ボイラー技士が主任者になれるのは、規模など一定の条件を満たすボイラーに限られます。制限なく選任できるのは特級のみです。",
+      "imagePath": null
+    },
+    {
+      "question": "特級ボイラー技士は、上位資格として広い範囲のボイラーを扱える。",
+      "isCorrect": true,
+      "explanation": "上位資格ほど扱える範囲は広い。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの使用を休止した場合、検査証の有効期間内であっても、その効力は失われる。",
+      "isCorrect": false,
+      "explanation": "不正解！休止報告を出して休止しても、有効期間（1年）が残っていれば検査証は有効です。ただし、再開時には使用再開検査が必要な場合があります。",
+      "imagePath": null
+    },
+    {
+      "question": "特級ボイラー技士は、2級より扱える範囲が狭い。",
+      "isCorrect": false,
+      "explanation": "狭くなるわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "「ボイラー変更検査」を受けた場合、新しいボイラー検査証が交付されるか、または裏書きされる。",
+      "isCorrect": true,
+      "explanation": "正解！検査の結果が証明書に反映されます。",
+      "imagePath": null
+    },
+    {
+      "question": "作業主任者の役割は、燃料の購入価格だけを決めることである。",
+      "isCorrect": false,
+      "explanation": "価格決定だけの役職ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの「変更届」が必要な改造として、「エコノマイザ（節炭器）の取り付け」が含まれる。",
+      "isCorrect": true,
+      "explanation": "正解！付属設備の変更も、ボイラーの性能に関わるため届出が必要です。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの取扱い作業には、一定の場合にボイラー取扱作業主任者の選任が必要である。",
+      "isCorrect": true,
+      "explanation": "法令で選任が必要な場合がある。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー技士の欠格事由には、18歳未満の者や、心身の障害により業務を適正に行えない者が含まれる。",
+      "isCorrect": true,
+      "explanation": "正解！安全に関わる業務のため、一定の制限があります。",
+      "imagePath": null
+    },
+    {
+      "question": "作業主任者に選任された者は、現場の危険防止に目を配る必要がある。",
+      "isCorrect": true,
+      "explanation": "選任は名義だけでは足りない。",
+      "imagePath": null
+    },
+    {
+      "question": "労働安全衛生法令では、設備だけでなく作業者教育も重要な要素である。",
+      "isCorrect": true,
+      "explanation": "教育は災害防止の基本である。",
+      "imagePath": null
+    },
+    {
+      "question": "法令上の点検や検査の記録は、残さなくてよい。",
+      "isCorrect": false,
+      "explanation": "不要ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの取扱い作業では、どのような場合でも作業主任者の選任は不要である。",
+      "isCorrect": false,
+      "explanation": "常に不要ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー室に、重油などの燃料を貯蔵する場合は、ボイラーから一定の距離を離す必要がある。",
+      "isCorrect": true,
+      "explanation": "正解！火災予防のため、条例などで距離が定められています（2m以上など）。",
+      "imagePath": null
+    },
+    {
+      "question": "定期的な自主点検は、異常の早期発見に役立つ。",
+      "isCorrect": true,
+      "explanation": "日常・定期点検は基本である。",
+      "imagePath": null
+    },
+    {
+      "question": "法令では、危険を防ぐため附属品や自動制御装置の維持が重要視される。",
+      "isCorrect": true,
+      "explanation": "安全装置の維持が基本である。",
+      "imagePath": null
+    },
+    {
+      "question": "安全弁や圧力計、水面測定装置は、ボイラーの安全に関わる重要な装置である。",
+      "isCorrect": true,
+      "explanation": "基本的安全装置である。",
+      "imagePath": null
+    },
+    {
+      "question": "小型ボイラーは、一般のボイラーと法令上の扱いが一部異なる。",
+      "isCorrect": true,
+      "explanation": "区分によって扱いが異なる。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー室では、関係者以外の立入りを制限するなど安全管理が重要である。",
+      "isCorrect": true,
+      "explanation": "危険防止の観点から管理が必要である。",
+      "imagePath": null
+    },
+    {
+      "question": "検査証や関係書類の管理は、対象設備の適法運用に関わる。",
+      "isCorrect": true,
+      "explanation": "書類管理も設備管理の一部である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの取扱者には、安全運転上の責務はない。",
+      "isCorrect": false,
+      "explanation": "責務がないわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "「使用再開検査」は、使用を休止したボイラーを再び使用しようとする際、休止期間が1年以上となった場合などに必要となる。",
+      "isCorrect": true,
+      "explanation": "正解！長期間休止したボイラーは、安全確認のため検査を受ける必要があります。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの「使用検査」は、外国から輸入したボイラー等を使用しようとする時に受ける検査である。",
+      "isCorrect": true,
+      "explanation": "正解！構造検定を受けていない（日本の基準で作られていない）ボイラーを使うための検査です。",
+      "imagePath": null
+    },
+    {
+      "question": "伝熱面積が3㎡以下の蒸気ボイラーは、「小型ボイラー」に分類され、ボイラー技士免許がなくても取り扱うことができる。",
+      "isCorrect": true,
+      "explanation": "正解！小型ボイラーは、特別教育を受けた者であれば取り扱えます。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー技士は、住所を変更したときは、免許証の書換え（書き換え）申請をしなければならない。",
+      "isCorrect": false,
+      "explanation": "不正解！住所変更だけなら書換えは不要です。氏名（名前）が変わった時は書換えが必要です。",
+      "imagePath": null
+    },
+    {
+      "question": "伝熱面積の算定において、貫流ボイラーは、燃焼ガス等に触れる管の面積の「10分の1」を伝熱面積とみなす。",
+      "isCorrect": true,
+      "explanation": "正解！貫流ボイラーは管だらけなので、そのまま計算すると巨大になりすぎるため、特例で1/10計算します。",
+      "imagePath": null
+    },
+    {
+      "question": "自主点検は、法令上も実務上も意味がない。",
+      "isCorrect": false,
+      "explanation": "意味がないわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "「小型ボイラー」を設置した場合は、所轄労働基準監督署長への設置届は不要である。",
+      "isCorrect": true,
+      "explanation": "正解！小型ボイラーは設置届などの規制が緩和されています。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの取扱者には、運転前点検や異常時措置など安全運転上の責務がある。",
+      "isCorrect": true,
+      "explanation": "資格だけでなく責務も伴う。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーに異常がある状態での継続使用は、法令上も安全上も問題が大きい。",
+      "isCorrect": true,
+      "explanation": "異常時は使用継続の可否を慎重に判断する。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーを設置しようとする者は、工事開始の30日前までに、所轄労働基準監督署長に「ボイラー設置届」を提出しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！計画段階で届け出る必要があります（小型ボイラーなどを除く）。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー室では、だれでも自由に出入りできるようにするのが原則である。",
+      "isCorrect": false,
+      "explanation": "自由出入りは危険である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー技士が、ボイラー取扱作業中に重大な過失により事故を起こした場合、免許の取消し（取り消し）処分を受けることがある。",
+      "isCorrect": true,
+      "explanation": "正解！重大な過失による事故は、免許取消しの対象となります。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの最高使用圧力を超えて使用することは、いかなる理由があっても禁止されている。",
+      "isCorrect": true,
+      "explanation": "正解！強度の限界を超えて使うのは非常に危険です。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの「燃焼室」などの内部に入って掃除や修理を行うときは、ボイラーを十分に冷却し、かつ「換気」を行わなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！酸欠事故や一酸化炭素中毒を防ぐため、非常に重要です。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの点検や掃除のために内部に入る際、他のボイラーとつながる蒸気管などの弁を確実に閉め、施錠などを行う必要がある。",
+      "isCorrect": true,
+      "explanation": "正解！他から蒸気が流れ込んでくると命に関わる事故になります。",
+      "imagePath": null
+    },
+    {
+      "question": "性能検査は、設備の塗装色だけを確認する趣旨の検査である。",
+      "isCorrect": false,
+      "explanation": "塗装確認が主目的ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "事業者は、ボイラーに事故が発生したときは、遅滞なく所轄労働基準監督署長に報告しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！爆発や破裂などの事故は、速やかに報告義務があります。",
+      "imagePath": null
+    },
+    {
+      "question": "2級ボイラー技士は、一定範囲のボイラーについて取扱い作業主任者になることができる。",
+      "isCorrect": true,
+      "explanation": "2級にも選任可能範囲がある。",
+      "imagePath": null
+    },
+    {
+      "question": "法令上の点検や検査の記録は、設備管理上重要である。",
+      "isCorrect": true,
+      "explanation": "記録は管理の根拠になる。",
+      "imagePath": null
+    },
+    {
+      "question": "性能検査（更新検査）を受ける際、ボイラーの冷却や清掃などの準備は、検査員（労働基準監督署など）が行ってくれる。",
+      "isCorrect": false,
+      "explanation": "不正解！受検者（事業者側）が事前に冷却・掃除・その他必要な準備をしておく義務があります。",
+      "imagePath": null
+    },
+    {
+      "question": "鋳鉄製ボイラーの使用期間（寿命）に関する法的規制はない。",
+      "isCorrect": true,
+      "explanation": "正解！適切に管理されていれば何年でも使えます。ただし、圧力や温度の制限は厳しいです。",
+      "imagePath": null
+    },
+    {
+      "question": "「溶接検査」は、ボイラーの製造工程において、溶接部分の強度を確認するために行われる検査である。",
+      "isCorrect": true,
+      "explanation": "正解！主要な溶接箇所は厳しく検査されます。",
+      "imagePath": null
+    },
+    {
+      "question": "所轄労働基準監督署長は、ボイラーの事故が発生し、危害が生ずるおそれがあると認めるときは、使用停止を命ずることができる。",
+      "isCorrect": true,
+      "explanation": "正解！行政には強い権限があり、危険と判断されれば止められます。",
+      "imagePath": null
+    },
+    {
+      "question": "落成検査は、設備を廃止した後にだけ行う検査である。",
+      "isCorrect": false,
+      "explanation": "廃止後専用の検査ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "法令違反の状態で運転を続けることは、事故時のリスクを大きくする。",
+      "isCorrect": true,
+      "explanation": "安全装置不備などは重大事故につながる。",
+      "imagePath": null
+    },
+    {
+      "question": "法令上の用語や区分を理解しておくと、検査・選任・届出の判断がしやすい。",
+      "isCorrect": true,
+      "explanation": "区分理解は実務で役に立つ。",
+      "imagePath": null
+    },
+    {
+      "question": "1級ボイラー技士は、すべてのボイラーにおいて「取扱作業主任者」になることができる。",
+      "isCorrect": false,
+      "explanation": "不正解！1級でも、大規模なボイラーの主任者にはなれない場合があります（特級が必要）。",
+      "imagePath": null
+    },
+    {
+      "question": "使用中のボイラーの伝熱面積を変更する場合、変更届のみでよく、変更検査を受ける必要はない。",
+      "isCorrect": false,
+      "explanation": "不正解！構造が変わるような変更工事を行う場合は、「変更検査」を受けなければなりません。",
+      "imagePath": null
+    },
+    {
+      "question": "性能検査は、対象設備を継続使用できる状態か確認する趣旨を持つ。",
+      "isCorrect": true,
+      "explanation": "継続使用の安全確認が目的である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー室において、ボイラーの最上部から天井までの距離は、原則として「1.2m以上」必要である。",
+      "isCorrect": true,
+      "explanation": "正解！安全弁の検査や配管作業を行うためのスペースです。",
+      "imagePath": null
+    },
+    {
+      "question": "法令では、附属品や自動制御装置の維持は重要視されない。",
+      "isCorrect": false,
+      "explanation": "重要視されないわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー取扱作業主任者は、1日に1回以上、水位測定装置の機能を点検しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！主任者の職務として法律で定められています。",
+      "imagePath": null
+    },
+    {
+      "question": "2級ボイラー技士は、いかなるボイラーについても作業主任者になれない。",
+      "isCorrect": false,
+      "explanation": "まったく不可ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "安全弁や圧力計、水面測定装置は、法令上なくてもよい装置である。",
+      "isCorrect": false,
+      "explanation": "なくてもよいわけではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー技士免許が取り消された場合でも、すぐに再試験を受ければ免許を取得できる。",
+      "isCorrect": false,
+      "explanation": "不正解！免許を取り消された場合、原則として「1年間」は新たに免許を受けることができません。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー室には、ボイラー検査証を見やすい場所に掲示しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！ボイラー検査証は、使用中のボイラーに必ず掲示する必要があります。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーに異常があっても、圧力が低ければ自由に継続使用できる。",
+      "isCorrect": false,
+      "explanation": "異常放置は危険である。",
+      "imagePath": null
+    },
+    {
       "question": "2級ボイラー技士の免状を紛失したときは、免許証再交付申請書を都道府県労働局長に提出する。",
       "isCorrect": true,
       "explanation": "正解！交付を受けた機関へ申請します。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー取扱作業主任者は、ボイラーの燃焼状態を監視し、異常がないか常に把握しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！安全運転を監督するのが主任者の役割です。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー取扱作業主任者を選任すべき事由が発生した日から、遅くとも「14日以内」に選任しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！選任したら、その旨を労働基準監督署長に報告する必要もあります。",
+      "imagePath": null
+    },
+    {
+      "question": "労働安全衛生法令では、作業者教育は全く問題にされない。",
+      "isCorrect": false,
+      "explanation": "全く不要ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーを使用するときは、法令上、検査や必要な附属品の備付けが重視される。",
+      "isCorrect": true,
+      "explanation": "安全確保のため法令で求められる。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの変更や補修は、どの内容でも法令上の確認は不要である。",
+      "isCorrect": false,
+      "explanation": "無条件で不要ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー室には、必要に応じて「２つ以上」の出入口を設けなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！事故時に逃げ遅れないよう、避難経路を確保する必要があります。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの定期自主検査は、「1か月を超えない期間ごと」に行わなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！性能検査（1年ごと）とは別に、事業者が毎月行う点検義務です。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーを廃止したときは、遅滞なくボイラー検査証を所轄労働基準監督署長に返還しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！使わなくなったボイラーの証書は返す義務があります。",
+      "imagePath": null
+    },
+    {
+      "question": "法令違反の状態で運転を続けても、事故リスクには関係しない。",
+      "isCorrect": false,
+      "explanation": "無関係ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー技士免許の種類によって、取り扱える設備範囲に差がある。",
+      "isCorrect": true,
+      "explanation": "特級・1級・2級で差がある。",
+      "imagePath": null
+    },
+    {
+      "question": "関係法令を守ることは、事故防止だけでなく事業者の管理責任にも関わる。",
+      "isCorrect": true,
+      "explanation": "法令遵守は安全管理の土台である。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーの伝熱面積の計算では、耐火れんがで覆われた部分は面積に算入しない。",
+      "isCorrect": true,
+      "explanation": "正解！直接熱が伝わらない部分は除外します。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー取扱者は、法令で求められる場合に必要な資格を備える必要がある。",
+      "isCorrect": true,
+      "explanation": "設備区分に応じ資格が必要になる。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラーを使用するときは、附属品や検査は法令上まったく重視されない。",
+      "isCorrect": false,
+      "explanation": "不要ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー則などの関係法令を理解することは、資格試験だけでなく実務上も重要である。",
+      "isCorrect": true,
+      "explanation": "法令理解は安全管理に直結する。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー技士免許は、本人が死亡したときは、遺族が遅滞なく返還しなければならない。",
+      "isCorrect": true,
+      "explanation": "正解！免許の効力は本人のみに帰属します。",
+      "imagePath": null
+    },
+    {
+      "question": "小型ボイラーも一般のボイラーと法令上まったく同一の扱いである。",
+      "isCorrect": false,
+      "explanation": "まったく同一ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "関係法令を守ることは、事故防止には無関係である。",
+      "isCorrect": false,
+      "explanation": "無関係ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "ボイラー技士免許は種類が違っても扱える範囲はすべて同じである。",
+      "isCorrect": false,
+      "explanation": "完全に同一ではない。",
+      "imagePath": null
+    },
+    {
+      "question": "検査証や関係書類は、紛失しても設備運用には全く関係しない。",
+      "isCorrect": false,
+      "explanation": "関係しないとはいえない。",
       "imagePath": null
     }
   ]
